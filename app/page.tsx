@@ -26,7 +26,7 @@ export default function Home(): ReactElement {
     ];
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center p-24 text-center">
+        <>
             <h1 className="font-sans text-4xl font-bold text-sky-400 md:text-6xl">
                 Nils Hindermann
             </h1>
@@ -48,24 +48,22 @@ export default function Home(): ReactElement {
                 </Link>
                 .
             </p>
-            <p className="mt-8 text-xl">
-                <ul className="m-0 p-0">
-                    {socialMediaLinks.map((link) => (
-                        <li
-                            key={link.url}
-                            className="mb-3 last:mb-0 lg:m-3 lg:inline"
+            <ul className="mt-8 p-0 text-xl">
+                {socialMediaLinks.map((link) => (
+                    <li
+                        key={link.url}
+                        className="mb-3 last:mb-0 lg:m-3 lg:inline"
+                    >
+                        <Link
+                            href={link.url}
+                            target="_blank"
+                            className="text-sky-400 underline transition-colors hover:text-sky-200"
                         >
-                            <Link
-                                href={link.url}
-                                target="_blank"
-                                className="text-sky-400 underline transition-colors hover:text-sky-200"
-                            >
-                                {link.displayName}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </p>
-        </main>
+                            {link.displayName}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </>
     );
 }
