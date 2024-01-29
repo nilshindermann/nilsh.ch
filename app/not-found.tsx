@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 
 export const metadata: Metadata = {
     title: '404 - Nils Hindermann',
-    description: 'Find out more about Nils Hindermann',
+    description: 'The requested page could not be found.',
 };
 
 export default function NotFoundPage(): ReactElement {
