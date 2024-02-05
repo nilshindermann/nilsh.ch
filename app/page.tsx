@@ -4,7 +4,7 @@ import { ReactElement } from 'react';
 export default function Home(): ReactElement {
     const socialMediaLinks: { url: string; displayName: string }[] = [
         {
-            url: 'https://www.youtbube.com/@nilshindermann',
+            url: 'https://www.youtube.com/@nilshindermann',
             displayName: 'YouTube',
         },
         {
