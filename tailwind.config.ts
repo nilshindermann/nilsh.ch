@@ -8,6 +8,9 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            colors: {
+                footer: 'rgb(8 47 73)',
+            },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic':
