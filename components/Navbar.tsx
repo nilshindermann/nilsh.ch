@@ -8,6 +8,7 @@ import React, { ReactElement, useState } from 'react';
 interface LinkElement {
     href: string;
     title: string;
+    children?: LinkElement[];
 }
 
 const links: LinkElement[] = [
@@ -18,6 +19,20 @@ const links: LinkElement[] = [
     {
         title: 'Über mich',
         href: '/about',
+    },
+    {
+        title: 'Projekte',
+        href: '/projects',
+        children: [
+            {
+                title: "Covid Game",
+                href: "/projects/covid-game",
+            },
+            {
+                title: "Spielhöhle",
+                href: "/projects/spielhoehle",
+            },
+        ],
     },
 ];
 
