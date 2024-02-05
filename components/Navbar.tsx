@@ -19,24 +19,26 @@ export default function Navbar(): ReactElement {
     const pathname = usePathname();
 
     return (
-        <nav className="hidden h-20 items-center justify-center bg-sky-950 text-center">
-            <ul className="p-0 text-xl">
-                {links.map((link) => (
-                    <li
-                        key={link.url}
-                        className="mb-3 last:mb-0 lg:m-3 lg:inline"
-                    >
-                        <Link
-                            href={link.url}
-                            className={`text-white transition-colors hover:text-sky-400 ${
-                                pathname === link.url ? 'font-bold' : ''
-                            }`}
-                        >
-                            {link.displayName}
-                        </Link>
+        <div className="navbar bg-base-100">
+            <div className="flex-1">
+                <a className="btn btn-ghost text-xl">daisyUI</a>
+            </div>
+            <div className="flex-none">
+                <ul className="menu menu-horizontal px-1">
+                    <li><a>Link</a></li>
+                    <li>
+                        <details>
+                            <summary>
+                                Parent
+                            </summary>
+                            <ul className="p-2 bg-base-100 rounded-t-none">
+                                <li><a>Link 1</a></li>
+                                <li><a>Link 2</a></li>
+                            </ul>
+                        </details>
                     </li>
-                ))}
-            </ul>
-        </nav>
+                </ul>
+            </div>
+        </div>
     );
 }
