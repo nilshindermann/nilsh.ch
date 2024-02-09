@@ -27,7 +27,7 @@ export default function Home(): ReactElement {
 
     return (
         <>
-            <h1 className="font-sans text-4xl font-bold text-sky-400 md:text-6xl">
+            <h1 className="font-sans text-4xl font-bold text-primary md:text-6xl">
                 Nils Hindermann
             </h1>
             <p className="mt-8 text-xl ">
@@ -42,7 +42,7 @@ export default function Home(): ReactElement {
                 <Link
                     href="https://l.nilsh.ch/ig"
                     target="_blank"
-                    className="text-sky-400 underline transition-colors hover:text-sky-200"
+                    className="link link-primary transition-colors hover:text-sky-200"
                 >
                     Instagram
                 </Link>
@@ -57,7 +57,7 @@ export default function Home(): ReactElement {
                         <Link
                             href={link.url}
                             target="_blank"
-                            className="text-sky-400 underline transition-colors hover:text-sky-200"
+                            className="link link-primary transition-colors hover:text-sky-200"
                         >
                             {link.displayName}
                         </Link>
