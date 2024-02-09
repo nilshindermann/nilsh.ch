@@ -30,7 +30,7 @@ export default function Navbar(): ReactElement {
     );
 }
 
-function NavbarLink({href, children}): ReactElement {
+function NavbarLink({href, children}: any): ReactElement {
     const pathname = usePathname();
     return <Link href={href} className={pathname == href ? "font-bold" : ""}>{children}</Link>
 }
