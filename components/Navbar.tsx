@@ -16,29 +16,21 @@ const links: { url: string; displayName: string }[] = [
 ];
 
 export default function Navbar(): ReactElement {
-    const pathname = usePathname();
-
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-neutral text-neutral-content">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <Link className="btn btn-ghost text-xl" href="/">Nils Hindermann</Link>
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Link</a></li>
-                    <li>
-                        <details>
-                            <summary>
-                                Parent
-                            </summary>
-                            <ul className="p-2 bg-base-100 rounded-t-none">
-                                <li><a>Link 1</a></li>
-                                <li><a>Link 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
+                    <li><NavbarLink href="/about">Über mich</NavbarLink></li>
                 </ul>
             </div>
         </div>
     );
+}
+
+function NavbarLink({href, children}): ReactElement {
+    const pathname = usePathname();
+    return <Link href={href} className={pathname == href ? "font-bold" : ""}>{children}</Link>
 }
