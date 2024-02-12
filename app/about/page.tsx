@@ -7,5 +7,12 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage(): ReactElement {
-    return <h1>About me</h1>;
+    return (
+        <>
+            <h1>About me</h1>
+            <div className="p-10">
+                <button className="btn btn-primary">Button</button>
+            </div>
+        </>
+    );
 }

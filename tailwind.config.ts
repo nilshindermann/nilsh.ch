@@ -8,10 +8,6 @@ const config: Config = {
     ],
     theme: {
         extend: {
-            colors: {
-                navbar: 'rgb(8 47 73)',
-                footer: 'rgb(8 47 73)'
-            },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic':
@@ -19,6 +15,23 @@ const config: Config = {
             },
         },
     },
-    plugins: [],
+    daisyui: {
+        themes: [
+            {
+                default: {
+                    "primary": "#22d3ee",
+                    "secondary": "#c3c3c3",
+                    "accent": "#ffffff",
+                    "neutral": "rgb(8 47 73)",
+                    "base-100": "rgb(55, 65, 81)",
+                    "info": "#cffafe",
+                    "success": "#66da66",
+                    "warning": "#fcd34d",
+                    "error": "#ef4444",
+                },
+            },
+        ],
+    },
+    plugins: [require('daisyui')],
 };
 export default config;

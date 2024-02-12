@@ -1,111 +1,48 @@
 'use client';
 
-import { HamburgerMenu } from '@/components/HamburgerMenu';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 
-interface LinkElement {
-    href: string;
-    title: string;
-    children?: LinkElement[];
-}
-
-const links: LinkElement[] = [
+const links: { url: string; displayName: string }[] = [
     {
-        title: 'Startseite',
-        href: '/',
+        url: '/',
+        displayName: 'Home',
     },
     {
-        title: 'Über mich',
-        href: '/about',
-    },
-    {
-        title: 'Projekte',
-        href: '/projects',
-        children: [
-            {
-                title: "Covid Game",
-                href: "/projects/covid-game",
-            },
-            {
-                title: "Spielhöhle",
-                href: "/projects/spielhoehle",
-            },
-        ],
+        url: '/about',
+        displayName: 'About',
     },
 ];
 
 export default function Navbar(): ReactElement {
     const pathname = usePathname();
-    const [showModal, setShowModal] = useState(false);
-
-    const toggle = (): void => setShowModal(!showModal);
 
     return (
-        <nav className="z-10 bg-navbar drop-shadow-2xl">
-            <div className="container mx-auto flex flex-row justify-between p-4 tracking-widest text-white md:max-w-7xl">
-                <ul className="hidden gap-2 md:flex">
-                    {links.map((link) => (
-                        <li
-                            key={`${link.href}_${link.title}`}
-                            className="flex gap-2 text-xl"
-                        >
-                            <Link
-                                className={`hover:text-primary transition ease-in-out hover:transition-colors ${
-                                    pathname === link.href ? 'font-bold' : ''
-                                }`}
-                                key={link.title}
-                                href={link.href}
-                            >
-                                {link.title}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-
-                <Link href="/">nilsh.ch</Link>
-
-                <div className="block md:hidden">
-                    <HamburgerMenu showModal={showModal} toggle={toggle} />
-                    <div
-                        className={`absolute left-0 top-0 h-screen w-screen bg-black transition-opacity delay-100 ${
-                            showModal ? 'opacity-30' : 'opacity-0'
-                        }`}
-                    />
-                    <div
-                        id="mobile-nav"
-                        className={`fixed right-0 top-0 h-screen min-w-[10rem] bg-navbar pt-[4rem] transition-transform delay-100 ease-in-out ${
-                            showModal
-                                ? 'translate-x-0 shadow-2xl'
-                                : 'translate-x-full'
-                        }`}
-                    >
-                        <ul className="flex flex-col gap-2">
-                            {links.map((link) => (
-                                <li
-                                    key={`${link.href}_${link.title}`}
-                                    className="flex flex-col gap-2"
-                                >
-                                    <Link
-                                        className={`hover:text-primary mx-2 transition ease-in-out hover:transition-colors ${
-                                            pathname === link.href
-                                                ? 'font-bold'
-                                                : ''
-                                        }`}
-                                        key={link.title}
-                                        href={link.href}
-                                        onClick={toggle}
-                                    >
-                                        {link.title}
-                                    </Link>
-                                    <hr />
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
+        <div className="navbar bg-neutral text-neutral-content">
+            <div className="flex-1">
+                <Link className="btn btn-ghost text-xl" href="/">
+                    Nils Hindermann
+                </Link>
             </div>
-        </nav>
+            <div className="flex-none">
+                <ul className="menu menu-horizontal px-1">
+                    <li>
+                        <NavbarLink href="/about">Über mich</NavbarLink>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+function NavbarLink({ href, children }): ReactElement {
+    const pathname = usePathname();
+    return (
+        <Link href={href} className={pathname == href ? 'font-bold' : ''}>
+            {children}
+        </Link>
     );
 }
