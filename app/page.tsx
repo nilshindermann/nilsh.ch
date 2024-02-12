@@ -2,29 +2,6 @@ import Link from 'next/link';
 import { ReactElement } from 'react';
 
 export default function Home(): ReactElement {
-    const socialMediaLinks: { url: string; displayName: string }[] = [
-        {
-            url: 'https://www.youtbube.com/@nilshindermann',
-            displayName: 'YouTube',
-        },
-        {
-            url: 'https://www.instagram.com/nilshindermann',
-            displayName: 'Instagram',
-        },
-        {
-            url: 'https://twitter.com/nilshindermann',
-            displayName: 'Twitter',
-        },
-        {
-            url: 'https://twitch.com/nilshindermann',
-            displayName: 'Twitch',
-        },
-        {
-            url: 'https://linktr.ee/nilshindermann',
-            displayName: 'Linktree',
-        },
-    ];
-
     return (
         <>
             <h1 className="font-sans text-4xl font-bold text-primary md:text-6xl">
@@ -48,22 +25,6 @@ export default function Home(): ReactElement {
                 </Link>
                 .
             </p>
-            <ul className="mt-8 p-0 text-xl">
-                {socialMediaLinks.map((link) => (
-                    <li
-                        key={link.url}
-                        className="mb-3 last:mb-0 lg:m-3 lg:inline"
-                    >
-                        <Link
-                            href={link.url}
-                            target="_blank"
-                            className="link link-primary transition-colors hover:text-sky-200"
-                        >
-                            {link.displayName}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
         </>
     );
 }
