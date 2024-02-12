@@ -1,12 +1,25 @@
+import SocialMediaLinks from '@/components/SocialMediaLinks';
+import Link from 'next/link';
 import { ReactElement } from 'react';
 
 export default function Footer(): ReactElement {
     return (
-        <div className="flex h-20 flex-shrink-0 items-center justify-center bg-sky-950 text-center">
-            <p className="text-xl">
-                Copyright &copy; 2024{' '}
-                <span className="font-bold">Nils Hindermann</span>
-            </p>
-        </div>
+        <footer className="footer footer-center rounded bg-neutral p-10 text-neutral-content">
+            <nav className="grid grid-flow-col gap-4">
+                <Link className="link-hover link" href="/about">
+                    Über mich
+                </Link>
+                <Link className="link-hover link" href="/contact">
+                    Kontakt
+                </Link>
+                <Link className="link-hover link" href="/projects">
+                    Projekte
+                </Link>
+            </nav>
+            <SocialMediaLinks />
+            <aside>
+                <p>Copyright &copy; 2024 - Nils Hindermann</p>
+            </aside>
+        </footer>
     );
 }
