@@ -4,14 +4,18 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { ReactElement } from 'react';
 
-const links: { url: string; displayName: string }[] = [
+const links: { href: string; displayName: string }[] = [
     {
-        url: '/',
-        displayName: 'Home',
+        href: '/about',
+        displayName: 'Über mich',
     },
     {
-        url: '/about',
-        displayName: 'About',
+        href: '/contact',
+        displayName: 'Kontakt',
+    },
+    {
+        href: '/projects',
+        displayName: 'Projekte',
     },
 ];
 
@@ -27,22 +31,20 @@ export default function Navbar(): ReactElement {
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
-                    <li>
-                        <NavbarLink href="/about">Über mich</NavbarLink>
-                    </li>
+                    {links.map((link) => (
+                        <li key={link.href}>
+                            <Link
+                                href={link.href}
+                                className={
+                                    pathname == link.href ? 'font-bold' : ''
+                                }
+                            >
+                                {link.displayName}
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>
-    );
-}
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-function NavbarLink({ href, children }): ReactElement {
-    const pathname = usePathname();
-    return (
-        <Link href={href} className={pathname == href ? 'font-bold' : ''}>
-            {children}
-        </Link>
     );
 }
