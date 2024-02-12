@@ -4,17 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { ReactElement } from 'react';
 
-const links: { url: string; displayName: string }[] = [
-    {
-        url: '/',
-        displayName: 'Home',
-    },
-    {
-        url: '/about',
-        displayName: 'About',
-    },
-];
-
 export default function Navbar(): ReactElement {
     return (
         <div className="navbar bg-neutral text-neutral-content">
@@ -34,7 +23,9 @@ export default function Navbar(): ReactElement {
     );
 }
 
-function NavbarLink({ href, children }: any): ReactElement {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+function NavbarLink({ href, children }): ReactElement {
     const pathname = usePathname();
     return (
         <Link href={href} className={pathname == href ? 'font-bold' : ''}>
