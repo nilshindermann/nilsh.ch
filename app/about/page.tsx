@@ -1,18 +1,24 @@
+import Countdown from '@/components/Countdown';
 import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
 
 export const metadata: Metadata = {
-    title: 'About me - Nils Hindermann',
-    description: 'Find out more about Nils Hindermann',
+    title: 'Über mich - Nils Hindermann',
+    description:
+        'Nils Hindermann ist ein Schweizer Softwareentwickler aus Zürich.',
 };
 
 export default function AboutPage(): ReactElement {
     return (
         <>
-            <h1>About me</h1>
-            <div className="p-10">
-                <button className="btn btn-primary">Button</button>
-            </div>
+            <h1 className="mb-5 text-4xl font-bold text-primary">Über mich</h1>
+            <p className="mb-1">
+                Ich bin ein junger Softwareentwickler aus Zürich.
+            </p>
+            <h2 className="text-lg font-semibold">
+                Zeit bis zu meinem nächsten Geburtstag
+            </h2>
+            <Countdown />
         </>
     );
 }
