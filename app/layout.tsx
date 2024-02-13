@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'nilsh.ch - Nils Hindermann',
-    description: 'This is the website of Nils Hindermann',
+    description:
+        'Nils Hindermann ist ein Schweizer Softwareentwickler aus Zürich.',
 };
 
 export default function RootLayout({
