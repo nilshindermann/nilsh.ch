@@ -20,7 +20,7 @@ export default function RootLayout({
     children: ReactElement;
 }): ReactElement {
     return (
-        <html lang="en">
+        <html lang="de-ch">
             <body className={inter.className}>
                 <div className="flex min-h-screen flex-col">
                     <Navbar />
