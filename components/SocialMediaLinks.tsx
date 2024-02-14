@@ -13,7 +13,7 @@ interface SocialMediaLink {
 
 const socialMediaLinks: SocialMediaLink[] = [
     {
-        href: 'https://www.youtbube.com/@nilshindermann',
+        href: 'https://www.youtube.com/@nilshindermann',
         title: 'YouTube',
         svg: {
             viewBox: '0 0 24 24',
