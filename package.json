@@ -29,6 +29,7 @@
         "import-sort-style-module": "latest",
         "postcss": "latest",
         "prettier": "latest",
+        "prettier-eslint": "latest",
         "prettier-plugin-import-sort": "latest",
         "prettier-plugin-tailwindcss": "latest",
         "tailwindcss": "latest",
