@@ -10,5 +10,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: baseUrl + '/about',
         },
+        {
+            url: baseUrl + '/contact',
+        },
+        {
+            url: baseUrl + '/projects',
+        },
     ];
 }

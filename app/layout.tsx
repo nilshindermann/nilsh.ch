@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'nilsh.ch - Nils Hindermann',
-    description: 'This is the website of Nils Hindermann',
+    description:
+        'Nils Hindermann ist ein Schweizer Softwareentwickler aus Zürich.',
 };
 
 export default function RootLayout({
@@ -19,11 +20,11 @@ export default function RootLayout({
     children: ReactElement;
 }): ReactElement {
     return (
-        <html lang="en">
+        <html lang="de-ch">
             <body className={inter.className}>
                 <div className="flex min-h-screen flex-col">
                     <Navbar />
-                    <main className="flex flex-1 flex-col items-center justify-center p-16 text-center">
+                    <main className="flex flex-1 flex-col items-center justify-center p-8 text-center">
                         {children}
                     </main>
                     <Footer />
