@@ -6,6 +6,8 @@ import { ReactElement } from 'react';
 
 import { events } from '../events';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
     title: 'Countdown - Nils Hindermann',
     description: 'The final countdown!',
