@@ -18,7 +18,7 @@ export default function AboutPage(): ReactElement {
             <h2 className="text-lg font-semibold">
                 Zeit bis zu meinem nächsten Geburtstag
             </h2>
-            <Countdown />
+            <Countdown event={{ month: 7, day: 14 }} />
         </>
     );
 }
