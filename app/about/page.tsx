@@ -1,4 +1,4 @@
-import Countdown from '@/components/Countdown';
+import Countdown from '@/components/countdown/Countdown';
 import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
 
