@@ -71,6 +71,7 @@ export default function Navbar(): ReactElement {
                             <li key={link.href}>
                                 <Link
                                     href={link.href}
+                                    onClick={() => setMenuOpen(false)}
                                     className={
                                         pathname == link.href ? 'font-bold' : ''
                                     }
