@@ -1,25 +1,38 @@
 import Countdown from '@/components/countdown/Countdown';
 import EventSelect from '@/components/countdown/EventSelect';
-import { Metadata } from 'next';
+import CountdownEvent from '@/models/CountdownEvent';
+import { getDateFromEvent } from '@/models/EventDate';
+import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ReactElement } from 'react';
 
 import { events } from '../events';
-import { getDateFromEvent } from '@/models/EventDate';
 
 export const runtime = 'edge';
 
-export const metadata: Metadata = {
-    title: 'Countdown - Nils Hindermann',
-    description: 'The final countdown!',
-};
-
-export default function CountdownPage({
-    params,
-}: {
+interface Props {
     params: { event: string };
-}): ReactElement {
-    const event = events.find((e) => e.slug === params.event);
+}
+
+function findEvent(slug: string): CountdownEvent | undefined {
+    return events.find((e) => e.slug === slug);
+}
+
+export function generateMetadata({ params }: Props): Metadata {
+    const event = findEvent(params.event);
+
+    if (!event) {
+        notFound();
+    }
+
+    return {
+        title: `${event.name} - Nils Hindermann`,
+        description: `${event.name}. Der Countdown läuft.`,
+    };
+}
+
+export default function CountdownPage({ params }: Props): ReactElement {
+    const event = findEvent(params.event);
 
     if (!event) {
         notFound();
