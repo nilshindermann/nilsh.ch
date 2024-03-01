@@ -1,5 +1,7 @@
+'use client';
+
 import CountdownEvent from '@/models/CountdownEvent';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { ReactElement } from 'react';
 
 export default function EventSelect({
@@ -9,8 +11,10 @@ export default function EventSelect({
     events: Array<CountdownEvent>;
     current?: CountdownEvent;
 }): ReactElement {
+    const router = useRouter();
+
     return (
-        <div className="dropdown dropdown-right">
+        <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-success m-1">
                 Events
                 <svg
@@ -31,7 +35,9 @@ export default function EventSelect({
                     .filter((e) => !current || e.slug !== current.slug)
                     .map((e) => (
                         <li key={e.slug}>
-                            <Link href={'./' + e.slug}>{e.slug}</Link>
+                            <a onClick={() => router.push(`./${e.slug}`)}>
+                                {e.slug}
+                            </a>
                         </li>
                     ))}
             </ul>

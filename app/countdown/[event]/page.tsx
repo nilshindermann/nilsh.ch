@@ -2,7 +2,7 @@ import Countdown from '@/components/countdown/Countdown';
 import EventSelect from '@/components/countdown/EventSelect';
 import CountdownEvent from '@/models/CountdownEvent';
 import { getDateFromEvent } from '@/models/EventDate';
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ReactElement } from 'react';
 
