@@ -1,5 +1,6 @@
 'use client';
 
+import { getDateFromEvent } from '@/app/countdown/events';
 import EventDate from '@/models/EventDate';
 import { CSSProperties, ReactElement, useEffect, useState } from 'react';
 
@@ -15,20 +16,6 @@ export default function Countdown({
 }: {
     event: EventDate;
 }): ReactElement {
-    const getDateFromEvent = (eventDate: EventDate): Date => {
-        if (eventDate.year) {
-            return new Date(event.year!, event.month - 1, event.day);
-        } else {
-            const now = new Date();
-            const year: number = now.getFullYear();
-            const target = new Date(year, event.month - 1, event.day);
-
-            return now > target
-                ? new Date(year + 1, event.month - 1, event.day)
-                : target;
-        }
-    };
-
     const calcTime = (): Time => {
         const date = getDateFromEvent(event).getTime();
         const now = new Date().getTime();

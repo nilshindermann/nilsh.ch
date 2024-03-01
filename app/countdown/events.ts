@@ -1,4 +1,5 @@
 import CountdownEvent from '@/models/CountdownEvent';
+import EventDate from '@/models/EventDate';
 
 export const events: Array<CountdownEvent> = [
     {
@@ -58,3 +59,17 @@ export const events: Array<CountdownEvent> = [
         },
     },
 ];
+
+export const getDateFromEvent = (eventDate: EventDate): Date => {
+    if (eventDate.year) {
+        return new Date(eventDate.year!, eventDate.month - 1, eventDate.day);
+    } else {
+        const now = new Date();
+        const year: number = now.getFullYear();
+        const target = new Date(year, eventDate.month - 1, eventDate.day);
+
+        return now > target
+            ? new Date(year + 1, eventDate.month - 1, eventDate.day)
+            : target;
+    }
+};
