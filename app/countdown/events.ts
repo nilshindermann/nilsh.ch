@@ -2,26 +2,18 @@ import CountdownEvent from '@/models/CountdownEvent';
 
 export const events: Array<CountdownEvent> = [
     {
-        slug: 'corina',
-        name: 'Geburtstag von Corina Pünter',
+        slug: 'new-year',
+        name: 'Neujahr',
         date: {
-            day: 6,
-            month: 3,
+            day: 1,
+            month: 1,
         },
     },
     {
-        slug: 'elisa',
-        name: 'Geburtstag von Elisa Spano',
+        slug: 'may-the-fourth',
+        name: 'Star Wars Day',
         date: {
-            day: 12,
-            month: 4,
-        },
-    },
-    {
-        slug: 'darina',
-        name: 'Geburtstag von Darina Schweizer',
-        date: {
-            day: 7,
+            day: 4,
             month: 5,
         },
     },
@@ -34,27 +26,28 @@ export const events: Array<CountdownEvent> = [
         },
     },
     {
-        slug: 'kiana',
-        name: 'Geburtstag von Kiana Kuhn',
+        slug: 'august',
+        name: '1. August',
         date: {
-            day: 20,
-            month: 7,
-        },
-    },
-    {
-        slug: 'julia',
-        name: 'Geburtstag von Julia Rudolf',
-        date: {
-            day: 29,
-            month: 9,
-        },
-    },
-    {
-        slug: 'joana',
-        name: 'Geburtstag von Joana Schlatter',
-        date: {
-            day: 3,
+            day: 24,
             month: 12,
+        },
+    },
+    {
+        slug: 'x-mas',
+        name: 'Weihnachten',
+        date: {
+            day: 24,
+            month: 12,
+        },
+    },
+    {
+        slug: 'Y2K38',
+        name: 'Jahr-2038-Problem',
+        date: {
+            day: 19,
+            month: 1,
+            year: 2038,
         },
     },
 ];
