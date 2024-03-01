@@ -26,7 +26,7 @@ export function generateMetadata({ params }: Props): Metadata {
     }
 
     return {
-        title: `${event.name} - Nils Hindermann`,
+        title: `${event.name} - Countdown - Nils Hindermann`,
         description: `${event.name}. Der Countdown läuft.`,
     };
 }

@@ -6,14 +6,16 @@ import { events } from './events';
 
 export const metadata: Metadata = {
     title: '404 - Nils Hindermann',
-    description: 'The requested event could not be found.',
+    description: 'Das gewünschte Ereignis konnte nicht gefunden werden.',
 };
 
 export default function EventNotFoundPage(): ReactElement {
     return (
         <>
             <h1 className="mb-10 text-6xl font-bold">404</h1>
-            <p className="text-xl">The requested event could not be found.</p>
+            <p className="text-xl">
+                Leider wissen wir nicht, welches Ereignis du meinst.
+            </p>
             <EventSelect events={events} />
         </>
     );

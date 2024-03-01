@@ -45,7 +45,7 @@ export default function Countdown({
     }, [calcTime]);
 
     return (
-        <div className="grid auto-cols-max grid-flow-col gap-5 text-center">
+        <div className="grid auto-cols-max grid-flow-col gap-2 text-center sm:gap-3 lg:gap-4">
             <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
                 <span className="countdown-days countdown font-mono text-5xl">
                     <span

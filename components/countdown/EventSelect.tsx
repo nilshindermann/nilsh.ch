@@ -16,7 +16,7 @@ export default function EventSelect({
     return (
         <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-success m-1">
-                Events
+                Ereignisse
                 <svg
                     width="12px"
                     height="12px"
@@ -36,7 +36,7 @@ export default function EventSelect({
                     .map((e) => (
                         <li key={e.slug}>
                             <a onClick={() => router.push(`./${e.slug}`)}>
-                                {e.slug}
+                                {e.name}
                             </a>
                         </li>
                     ))}
