@@ -4,7 +4,8 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ReactElement } from 'react';
 
-import { events, getDateFromEvent } from '../events';
+import { events } from '../events';
+import { getDateFromEvent } from '@/models/EventDate';
 
 export const runtime = 'edge';
 

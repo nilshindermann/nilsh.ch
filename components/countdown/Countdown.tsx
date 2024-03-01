@@ -1,7 +1,6 @@
 'use client';
 
-import { getDateFromEvent } from '@/app/countdown/events';
-import EventDate from '@/models/EventDate';
+import EventDate, { getDateFromEvent } from '@/models/EventDate';
 import { CSSProperties, ReactElement, useEffect, useState } from 'react';
 
 interface Time {
