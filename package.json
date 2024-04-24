@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "dayjs": "latest",
+        "fast-xml-parser": "latest",
         "next": "latest",
         "react": "latest",
         "react-dom": "latest"
