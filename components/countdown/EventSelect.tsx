@@ -4,14 +4,19 @@ import CountdownEvent from '@/models/CountdownEvent';
 import { useRouter } from 'next/navigation';
 import { ReactElement } from 'react';
 
+interface Props {
+    events: Array<CountdownEvent>;
+    current?: CountdownEvent;
+    basePath?: string;
+}
+
 export default function EventSelect({
     events,
     current,
-}: {
-    events: Array<CountdownEvent>;
-    current?: CountdownEvent;
-}): ReactElement {
+    basePath,
+}: Props): ReactElement {
     const router = useRouter();
+    const path = basePath || '.';
 
     return (
         <div className="dropdown">
@@ -35,7 +40,7 @@ export default function EventSelect({
                     .filter((e) => !current || e.slug !== current.slug)
                     .map((e) => (
                         <li key={e.slug}>
-                            <a onClick={() => router.push(`./${e.slug}`)}>
+                            <a onClick={() => router.push(`${path}/${e.slug}`)}>
                                 {e.name}
                             </a>
                         </li>

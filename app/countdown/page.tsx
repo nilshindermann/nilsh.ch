@@ -12,7 +12,7 @@ export default function CountdownPage() {
                 auswählen, für das du einen Countdown sehen möchtest.
             </p>
             <div className="mt-5">
-                <EventSelect events={events} />
+                <EventSelect events={events} basePath="/countdown" />
             </div>
         </>
     );
