@@ -19,6 +19,9 @@ export default function AboutPage(): ReactElement {
                 Zeit bis zu meinem nächsten Geburtstag
             </h2>
             <Countdown />
+            <p className="mt-5">
+                This site is deployed at {process.env.CF_PAGES_URL ?? 'localhost'}
+            </p>
         </>
     );
 }
