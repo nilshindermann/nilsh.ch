@@ -20,7 +20,8 @@ export default function AboutPage(): ReactElement {
             </h2>
             <Countdown />
             <p className="mt-5">
-                This site is deployed at {process.env.CF_PAGES_URL ?? 'localhost'}
+                This site is deployed at{' '}
+                {process.env.CF_PAGES_URL ?? 'localhost'}
             </p>
         </>
     );
