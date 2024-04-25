@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { ReactElement } from 'react';
 
-// @ts-ignore
+// @ts-expect-error Ignore error warning
 import beRealImage from './IMG_8014.JPG';
 
 export const metadata: Metadata = {
