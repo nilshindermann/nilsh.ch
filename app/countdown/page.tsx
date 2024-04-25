@@ -1,9 +1,9 @@
 import EventSelect from '@/components/countdown/EventSelect';
-import React from 'react';
+import { ReactElement } from 'react';
 
 import { events } from './events';
 
-export default function CountdownPage() {
+export default function CountdownPage(): ReactElement {
     return (
         <>
             <h1 className="mb-5 text-4xl font-bold text-primary">Countdown</h1>
