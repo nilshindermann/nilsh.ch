@@ -1,7 +1,5 @@
-'use client';
-
 import CountdownEvent from '@/models/CountdownEvent';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { ReactElement } from 'react';
 
 interface Props {
@@ -15,7 +13,6 @@ export default function EventSelect({
     current,
     basePath,
 }: Props): ReactElement {
-    const router = useRouter();
     const path = basePath || '.';
 
     return (
@@ -40,9 +37,13 @@ export default function EventSelect({
                     .filter((e) => !current || e.slug !== current.slug)
                     .map((e) => (
                         <li key={e.slug}>
-                            <a onClick={() => router.push(`${path}/${e.slug}`)}>
+                            <Link
+                                href={`${path}/${e.slug}`}
+                                rel="nofollow"
+                                scroll={false}
+                            >
                                 {e.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
             </ul>
