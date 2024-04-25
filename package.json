@@ -1,6 +1,6 @@
 {
     "name": "nilsh.ch",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "dayjs": "latest",
         "next": "latest",
         "react": "latest",
         "react-dom": "latest"
