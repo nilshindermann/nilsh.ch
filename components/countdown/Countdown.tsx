@@ -29,7 +29,7 @@ export default function Countdown({
         const now: Dayjs = dayjs(new Date()).utc();
         const then: Dayjs = getDayJsFromEvent(event).utc();
         const diff: Duration = dayjs.duration(then.diff(now));
-        
+
         const years = diff.years();
         const months = diff.months();
         const days = diff.days();
@@ -80,14 +80,14 @@ export default function Countdown({
                 </div>
             )}
             {time.days > 0 && (
-            <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
-                <span className="countdown font-mono text-5xl">
-                    <span
-                        style={{ '--value': time.days } as CSSProperties}
-                    ></span>
-                </span>
-                Tage
-            </div>
+                <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
+                    <span className="countdown font-mono text-5xl">
+                        <span
+                            style={{ '--value': time.days } as CSSProperties}
+                        ></span>
+                    </span>
+                    Tage
+                </div>
             )}
             <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
                 <span className="countdown font-mono text-5xl">
