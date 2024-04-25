@@ -1,4 +1,4 @@
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import locale_de from 'dayjs/locale/de';
 import duration from 'dayjs/plugin/duration';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
@@ -19,20 +19,29 @@ export default interface EventDate {
     year?: number;
 }
 
-export const getDateFromEvent = (eventDate: EventDate): Date => {
+export const getDayJsFromEvent = (eventDate: EventDate): Dayjs => {
     if (eventDate.year) {
-        return new Date(eventDate.year!, eventDate.month - 1, eventDate.day);
+        return dayjs()
+            .locale(locale_de)
+            .year(eventDate.year!)
+            .month(eventDate.month - 1)
+            .date(eventDate.day)
+            .hour(0)
+            .minute(0)
+            .second(0)
+            .millisecond(0);
     } else {
-        const now = new Date();
-        const year: number = now.getFullYear();
-        const target = new Date(year, eventDate.month - 1, eventDate.day);
+        const now: Dayjs = dayjs(new Date());
+        const target: Dayjs = dayjs()
+            .locale(locale_de)
+            .year(now.year())
+            .month(eventDate.month - 1)
+            .date(eventDate.day)
+            .hour(0)
+            .minute(0)
+            .second(0)
+            .millisecond(0);
 
-        return now > target
-            ? new Date(year + 1, eventDate.month - 1, eventDate.day)
-            : target;
+        return now.isAfter(target) ? target.add(1, 'year') : target;
     }
-};
-
-export const getDayJsFromEvent = (eventDate: EventDate): dayjs.Dayjs => {
-    return dayjs(getDateFromEvent(eventDate)).locale(locale_de);
 };
