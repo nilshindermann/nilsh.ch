@@ -1,7 +1,7 @@
 import Countdown from '@/components/countdown/Countdown';
 import EventSelect from '@/components/countdown/EventSelect';
 import CountdownEvent from '@/models/CountdownEvent';
-import { getDateFromEvent } from '@/models/EventDate';
+import { getDayJsFromEvent } from '@/models/EventDate';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ReactElement } from 'react';
@@ -38,13 +38,7 @@ export default function CountdownPage({ params }: Props): ReactElement {
         notFound();
     }
 
-    const options: Intl.DateTimeFormatOptions = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-    };
-
-    const fmt: Intl.DateTimeFormat = new Intl.DateTimeFormat('de-CH', options);
+    const formattedDate: string = getDayJsFromEvent(event.date).format('LL');
 
     return (
         <>
@@ -52,7 +46,7 @@ export default function CountdownPage({ params }: Props): ReactElement {
                 {event.name}
             </h1>
             <Countdown event={event.date} />
-            <p className="my-2">{fmt.format(getDateFromEvent(event.date))}</p>
+            <p className="my-2">{formattedDate}</p>
             <EventSelect events={events} current={event} />
         </>
     );

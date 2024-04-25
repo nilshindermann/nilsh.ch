@@ -1,3 +1,18 @@
+import dayjs from 'dayjs';
+import locale_de from 'dayjs/locale/de';
+import duration from 'dayjs/plugin/duration';
+import LocalizedFormat from 'dayjs/plugin/LocalizedFormat';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
+
+// DayJS Plugins
+dayjs.extend(LocalizedFormat);
+dayjs.extend(duration);
+dayjs.extend(relativeTime);
+dayjs.extend(timezone);
+dayjs.extend(utc);
+
 export default interface EventDate {
     day: number;
     month: number;
@@ -16,4 +31,8 @@ export const getDateFromEvent = (eventDate: EventDate): Date => {
             ? new Date(year + 1, eventDate.month - 1, eventDate.day)
             : target;
     }
+};
+
+export const getDayJsFromEvent = (eventDate: EventDate): dayjs.Dayjs => {
+    return dayjs(getDateFromEvent(eventDate)).locale(locale_de);
 };
