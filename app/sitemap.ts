@@ -16,5 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: baseUrl + '/projects',
         },
+        {
+            url: baseUrl + '/countdown',
+        },
     ];
 }
