@@ -14,7 +14,8 @@ export default function EventNotFoundPage(): ReactElement {
         <>
             <h1 className="mb-10 text-6xl font-bold">404</h1>
             <p className="text-xl">
-                Leider wissen wir nicht, welches Ereignis du meinst.
+                Das angegebene Ereignis konnte nicht gefunden werden. Bitte
+                wähle ein anderes Ereignis aus.
             </p>
             <EventSelect events={events} />
         </>
