@@ -17,7 +17,9 @@ export default function EventNotFoundPage(): ReactElement {
                 Das angegebene Ereignis konnte nicht gefunden werden. Bitte
                 wähle ein anderes Ereignis aus.
             </p>
-            <EventSelect events={events} />
+            <div className="mt-5">
+                <EventSelect events={events} />
+            </div>
         </>
     );
 }
