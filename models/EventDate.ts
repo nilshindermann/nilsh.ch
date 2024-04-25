@@ -1,13 +1,13 @@
 import dayjs from 'dayjs';
 import locale_de from 'dayjs/locale/de';
 import duration from 'dayjs/plugin/duration';
-import LocalizedFormat from 'dayjs/plugin/LocalizedFormat';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 
 // DayJS Plugins
-dayjs.extend(LocalizedFormat);
+dayjs.extend(localizedFormat);
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
 dayjs.extend(timezone);
