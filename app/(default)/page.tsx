@@ -1,11 +1,15 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ReactElement } from 'react';
+
+import logo from './assets/nilshindermann_logo.svg';
 
 export default function Home(): ReactElement {
     return (
         <>
-            <h1 className="font-sans text-4xl font-bold text-primary md:text-6xl">
-                Nils Hindermann
+            <Image className="mb-8" src={logo} alt="nils hindermann" />
+            <h1 className="font-sans text-4xl font-bold text-primary">
+                Willkommen bei Nils&nbsp;Hindermann
             </h1>
             <p className="mt-8 text-xl ">
                 Hi, ich bin Nils Hindermann 😊
