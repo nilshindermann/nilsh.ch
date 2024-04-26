@@ -1,7 +1,5 @@
 import './globals.css';
 
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import React, { ReactElement } from 'react';
@@ -21,15 +19,7 @@ export default function RootLayout({
 }): ReactElement {
     return (
         <html lang="de-ch">
-            <body className={inter.className}>
-                <div className="flex min-h-screen flex-col">
-                    <Navbar />
-                    <main className="flex flex-1 flex-col items-center justify-center p-8 text-center">
-                        {children}
-                    </main>
-                    <Footer />
-                </div>
-            </body>
+            <body className={inter.className}>{children}</body>
         </html>
     );
 }
