@@ -14,6 +14,10 @@ const links: { href: string; displayName: string }[] = [
         displayName: 'Kontakt',
     },
     {
+        href: '/orienteering',
+        displayName: 'Orientierungslauf',
+    },
+    {
         href: '/projects',
         displayName: 'Projekte',
     },
@@ -39,6 +43,7 @@ export default function Navbar(): ReactElement {
                         <input
                             type="checkbox"
                             checked={menuOpen}
+                            aria-label="Toggle menu"
                             onChange={(e) => setMenuOpen(e.target.checked)}
                         />
                         <svg
