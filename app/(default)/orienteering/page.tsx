@@ -1,3 +1,4 @@
+import { linkStyles } from '@/app/constants';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React, { ReactElement } from 'react';
@@ -24,6 +25,7 @@ export default function OrienteeringPage(): ReactElement {
                 <Link
                     href="https://www.o-l.ch/cgi-bin/pliste?cat=HAK&result=list"
                     target="_blank"
+                    className={linkStyles}
                 >
                     Jahrespunkteliste
                 </Link>{' '}
