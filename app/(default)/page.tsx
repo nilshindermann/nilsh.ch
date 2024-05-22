@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { ReactElement } from 'react';
 
+import { linkStyles } from '../constants';
+
 export default function Home(): ReactElement {
     return (
         <>
@@ -19,7 +21,7 @@ export default function Home(): ReactElement {
                 <Link
                     href="https://l.nilsh.ch/ig"
                     target="_blank"
-                    className="link link-primary transition-colors hover:text-sky-200"
+                    className={linkStyles}
                 >
                     Instagram
                 </Link>
