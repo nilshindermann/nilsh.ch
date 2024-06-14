@@ -6,7 +6,8 @@ const linkStyles: string = 'text-primary underline hover:no-underline';
 
 export const metadata: Metadata = {
     title: 'Projekte - Nils Hindermann',
-    description: 'Eine Liste von einigen Projekten, die ich aktuell oder in der Vergangenheit umgesetzt habe.',
+    description:
+        'Eine Liste von einigen Projekten, die ich aktuell oder in der Vergangenheit umgesetzt habe.',
 };
 
 export default function ProjectsPage(): ReactElement {
@@ -85,14 +86,15 @@ export default function ProjectsPage(): ReactElement {
                     <li>Azubi Management Tool</li>
                     <li>
                         LWZO 2021 (
-                            <Link
-                                href="https://l.nilsh.ch/lwzowin"
-                                target="_blank"
-                                className={linkStyles}
-                            >
-                                gewonnen
-                            </Link>
-                        )</li>
+                        <Link
+                            href="https://l.nilsh.ch/lwzowin"
+                            target="_blank"
+                            className={linkStyles}
+                        >
+                            gewonnen
+                        </Link>
+                        )
+                    </li>
                     <li>LWZO 2020</li>
                 </ul>
             </div>
