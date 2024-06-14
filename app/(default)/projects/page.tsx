@@ -6,7 +6,7 @@ const linkStyles: string = 'text-primary underline hover:no-underline';
 
 export const metadata: Metadata = {
     title: 'Projekte - Nils Hindermann',
-    description: 'Alle Projekte, an denen ich so mitgewirkt habe.',
+    description: 'Eine Liste von einigen Projekten, die ich aktuell oder in der Vergangenheit umgesetzt habe.',
 };
 
 export default function ProjectsPage(): ReactElement {
@@ -20,16 +20,20 @@ export default function ProjectsPage(): ReactElement {
                 </p>
                 <p className="mt-2">
                     Die meisten meiner Projekte sind privat und nicht
-                    öffentlich, jedoch gibt es einige Projekte, die ich auf
-                    GitHub veröffentlicht habe.
+                    öffentlich, jedoch gibt es einige Projekte, die ich auf{' '}
+                    <Link
+                        href="https://github.com/nilshindermann?tab=repositories"
+                        target="_blank"
+                        className={linkStyles}
+                    >
+                        GitHub
+                    </Link>{' '}
+                    veröffentlicht habe.
                 </p>
                 <h2 className="mt-5 text-xl font-bold text-secondary">
                     Aktuelle Projekte
                 </h2>
-                <ul className="list-inside list-disc">
-                    <li>
-                        Aktuell bin ich mit meinem Lehrabschluss beschäftigt
-                    </li>
+                <ul className="list-outside list-disc pl-5">
                     <li>
                         Diese Webseite (
                         <Link
@@ -37,24 +41,59 @@ export default function ProjectsPage(): ReactElement {
                             target="_blank"
                             className={linkStyles}
                         >
-                            Sourcecode auf GitHub
+                            Sourcecode
                         </Link>
                         )
+                    </li>
+                    <li>
+                        <Link
+                            href="https://dragdroppy.nilsh.ch"
+                            target="_blank"
+                            className={linkStyles}
+                        >
+                            Drag Droppy
+                        </Link>
                     </li>
                 </ul>
                 <h2 className="mt-5 text-xl font-bold text-secondary">
                     Vergangene Projekte
                 </h2>
-                <ul className="list-inside list-disc">
+                <ul className="list-outside list-disc pl-5">
                     <li>
-                        <Link
-                            href="https://github.com/nilshindermann?tab=repositories"
-                            target="_blank"
-                            className={linkStyles}
-                        >
-                            GitHub
-                        </Link>
+                        Diverse Projekte für Fachmodule an der TBZ
+                        <ul className="list-outside list-disc pl-5">
+                            <li>
+                                <Link
+                                    href="https://m152.nilsh.ch"
+                                    target="_blank"
+                                    className={linkStyles}
+                                >
+                                    M152
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="https://github.com/code-with-nils/Parkgarage-Romer-Hindermann"
+                                    target="_blank"
+                                    className={linkStyles}
+                                >
+                                    M242
+                                </Link>
+                            </li>
+                        </ul>
                     </li>
+                    <li>Azubi Management Tool</li>
+                    <li>
+                        LWZO 2021 (
+                            <Link
+                                href="https://l.nilsh.ch/lwzowin"
+                                target="_blank"
+                                className={linkStyles}
+                            >
+                                gewonnen
+                            </Link>
+                        )</li>
+                    <li>LWZO 2020</li>
                 </ul>
             </div>
         </>
