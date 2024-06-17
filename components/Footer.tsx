@@ -6,13 +6,13 @@ export default function Footer(): ReactElement {
     return (
         <footer className="footer footer-center rounded bg-neutral p-10 text-neutral-content">
             <nav className="grid grid-flow-col gap-4">
-                <Link className="link-hover link" href="/about">
+                <Link className="link-hover link text-inherit" href="/about">
                     Über mich
                 </Link>
-                <Link className="link-hover link" href="/contact">
+                <Link className="link-hover link text-inherit" href="/contact">
                     Kontakt
                 </Link>
-                <Link className="link-hover link" href="/projects">
+                <Link className="link-hover link text-inherit" href="/projects">
                     Projekte
                 </Link>
             </nav>
