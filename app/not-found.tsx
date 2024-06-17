@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
-import { linkStyles } from './constants';
-
 export const metadata: Metadata = {
     title: '404 - Nils Hindermann',
     description: 'The requested page could not be found.',
@@ -18,9 +16,7 @@ export default function NotFoundPage(): ReactElement {
                     The requested page or resource could not be found.
                 </p>
                 <p className="mt-10 text-xl">
-                    <Link href="/" className={linkStyles}>
-                        Go back to the home page.
-                    </Link>
+                    <Link href="/">Go back to the home page.</Link>
                 </p>
             </div>
         </div>

@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { ReactElement } from 'react';
 
-import { linkStyles } from '../constants';
-
 export default function Home(): ReactElement {
     return (
         <>
@@ -18,11 +16,7 @@ export default function Home(): ReactElement {
             <p className="mt-8 text-xl">
                 In meiner Freizeit fotografiere ich gerne. Einige Fotos poste
                 ich auf{' '}
-                <Link
-                    href="https://l.nilsh.ch/ig"
-                    target="_blank"
-                    className={linkStyles}
-                >
+                <Link href="https://l.nilsh.ch/ig" target="_blank">
                     Instagram
                 </Link>
                 .
