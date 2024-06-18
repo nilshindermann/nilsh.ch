@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@south-paw/react-obfuscate-ts": "latest",
         "dayjs": "latest",
         "next": "latest",
         "react": "latest",
