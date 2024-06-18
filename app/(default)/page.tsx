@@ -16,11 +16,7 @@ export default function Home(): ReactElement {
             <p className="mt-8 text-xl">
                 In meiner Freizeit fotografiere ich gerne. Einige Fotos poste
                 ich auf{' '}
-                <Link
-                    href="https://l.nilsh.ch/ig"
-                    target="_blank"
-                    className="link link-primary transition-colors hover:text-sky-200"
-                >
+                <Link href="https://l.nilsh.ch/ig" target="_blank">
                     Instagram
                 </Link>
                 .
