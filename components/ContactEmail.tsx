@@ -7,13 +7,15 @@ interface ContactEmailProps {
     email: string;
 }
 
-export default function ContactEmail({email}: ContactEmailProps): ReactElement {
+export default function ContactEmail({
+    email,
+}: ContactEmailProps): ReactElement {
     return (
         <Obfuscate
             email={`${email}?subject=Hello%20Nils!`}
             obfuscateText="https://www.nilsh.ch/privacy"
             aria-label="Email address is obfuscated, focus to reveal"
-            className='text-inherit'
+            className="text-inherit"
         >
             {email}
         </Obfuscate>
