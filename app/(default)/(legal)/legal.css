@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    a {
+        @apply text-inherit underline hover:no-underline;
+    }
+
+    ul {
+        @apply list-outside list-disc pl-5;
+    }
+
+    h1 {
+        @apply mb-5 text-center text-4xl font-bold text-primary;
+    }
+
+    h2 {
+        @apply mb-1 text-2xl font-bold;
+    }
+
+    h3 {
+        @apply text-xl font-bold;
+    }
+
+    h4 {
+        @apply text-lg font-bold;
+    }
+}
