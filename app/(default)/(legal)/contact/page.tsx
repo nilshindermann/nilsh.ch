@@ -11,11 +11,13 @@ export const metadata: Metadata = {
 export default function ContactPage(): ReactElement {
     return (
         <>
-            <h1 className="mb-5 text-4xl font-bold text-primary">Kontakt</h1>
-            <p>Kontaktiere mich über E-Mail.</p>
-            <p className="mt-2 text-xl">
-                <ContactEmail email="hello@nilsh.ch" />
-            </p>
+            <h1>Kontakt</h1>
+            <div className="text-center">
+                <p>Kontaktiere mich über E-Mail.</p>
+                <p className="mt-2 text-xl">
+                    <ContactEmail email="hello@nilsh.ch" />
+                </p>
+            </div>
         </>
     );
 }
