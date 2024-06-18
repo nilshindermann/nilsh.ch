@@ -1,7 +1,7 @@
 'use client';
 
 import { Obfuscate } from '@south-paw/react-obfuscate-ts';
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 
 interface ObfuscateTextProps {
     children: string;
