@@ -386,9 +386,10 @@ export default function PrivacyPage(): ReactElement {
                 <p>
                     Unsere Website nutzt den Content Delivery Network (CDN)
                     Dienst von Cloudflare, Inc., 101 Townsend St, San Francisco,
-                    CA 94107, USA (&quot;Cloudflare&quot;). Ein CDN hilft, Inhalte unserer
-                    Website schneller zu liefern, indem es Kopien der Inhalte an
-                    ein Netzwerk von schnellen Lade-Servern verteilt.
+                    CA 94107, USA (&quot;Cloudflare&quot;). Ein CDN hilft,
+                    Inhalte unserer Website schneller zu liefern, indem es
+                    Kopien der Inhalte an ein Netzwerk von schnellen
+                    Lade-Servern verteilt.
                     <br />
                     <br />
                     Wenn Sie unsere Website besuchen, wird Ihre IP-Adresse an
