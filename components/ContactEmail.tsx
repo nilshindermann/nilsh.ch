@@ -12,7 +12,7 @@ export default function ContactEmail({
 }: ContactEmailProps): ReactElement {
     return (
         <Obfuscate
-            email={`${email}?subject=Hello%20Nils!`}
+            email={email}
             obfuscateText="https://www.nilsh.ch/privacy"
             aria-label="Email address is obfuscated, focus to reveal"
             className="text-inherit"
