@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
-const linkStyles: string = 'text-primary underline hover:no-underline';
-
 export const metadata: Metadata = {
     title: 'Projekte - Nils Hindermann',
     description:
@@ -25,7 +23,6 @@ export default function ProjectsPage(): ReactElement {
                     <Link
                         href="https://github.com/nilshindermann?tab=repositories"
                         target="_blank"
-                        className={linkStyles}
                     >
                         GitHub
                     </Link>{' '}
@@ -40,7 +37,6 @@ export default function ProjectsPage(): ReactElement {
                         <Link
                             href="https://github.com/nilshindermann/nilsh.ch"
                             target="_blank"
-                            className={linkStyles}
                         >
                             Sourcecode
                         </Link>
@@ -50,7 +46,6 @@ export default function ProjectsPage(): ReactElement {
                         <Link
                             href="https://dragdroppy.nilsh.ch"
                             target="_blank"
-                            className={linkStyles}
                         >
                             Drag Droppy
                         </Link>
@@ -67,7 +62,6 @@ export default function ProjectsPage(): ReactElement {
                                 <Link
                                     href="https://m152.nilsh.ch"
                                     target="_blank"
-                                    className={linkStyles}
                                 >
                                     M152
                                 </Link>
@@ -76,7 +70,6 @@ export default function ProjectsPage(): ReactElement {
                                 <Link
                                     href="https://github.com/code-with-nils/Parkgarage-Romer-Hindermann"
                                     target="_blank"
-                                    className={linkStyles}
                                 >
                                     M242
                                 </Link>
@@ -86,11 +79,7 @@ export default function ProjectsPage(): ReactElement {
                     <li>Azubi Management Tool</li>
                     <li>
                         LWZO 2021 (
-                        <Link
-                            href="https://l.nilsh.ch/lwzowin"
-                            target="_blank"
-                            className={linkStyles}
-                        >
+                        <Link href="https://l.nilsh.ch/lwzowin" target="_blank">
                             gewonnen
                         </Link>
                         )
