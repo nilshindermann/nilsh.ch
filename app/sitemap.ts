@@ -17,6 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: baseUrl + '/contact',
         },
         {
+            url: baseUrl + '/orienteering',
+        },
+        {
             url: baseUrl + '/projects',
         },
         {

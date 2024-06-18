@@ -22,7 +22,7 @@ export default function Footer(): ReactElement {
         <footer className="footer footer-center rounded bg-neutral p-10 text-neutral-content">
             <nav className="grid grid-flow-col gap-4">
                 {links.map(({ href, displayName }) => (
-                    <Link key={href} className="link-hover link" href={href}>
+                    <Link key={href} className="link-hover link text-inherit" href={href}>
                         {displayName}
                     </Link>
                 ))}

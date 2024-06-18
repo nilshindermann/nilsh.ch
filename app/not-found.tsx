@@ -16,9 +16,7 @@ export default function NotFoundPage(): ReactElement {
                     The requested page or resource could not be found.
                 </p>
                 <p className="mt-10 text-xl">
-                    <Link href="/" className="link">
-                        Go back to the home page.
-                    </Link>
+                    <Link href="/">Go back to the home page.</Link>
                 </p>
             </div>
         </div>
