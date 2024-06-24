@@ -76,7 +76,7 @@ export default async function Page(): Promise<ReactElement> {
                 </svg>
                 <span className="font-bold">
                     <Link
-                        className='text-inherit no-underline hover:underline'
+                        className="text-inherit no-underline hover:underline"
                         href="https://neoforged.net/news/neoforge-snapshots/#:~:text=NeoForge%20for%20snapshot%20versions%20is%20not%20intended%20for%20playing."
                         target="_blank"
                     >
