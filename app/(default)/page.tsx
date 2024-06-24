@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ReactElement } from 'react';
 
-import logo from './assets/nilshindermann_logo.svg';
+import logo from '../assets/nilshindermann_logo.svg';
 
 export default function Home(): ReactElement {
     return (
