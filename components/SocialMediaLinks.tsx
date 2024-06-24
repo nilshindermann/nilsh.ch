@@ -64,6 +64,7 @@ export default function SocialMediaLinks(): ReactElement {
                         href={link.href}
                         target="_blank"
                         title={link.title}
+                        className="text-inherit"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
