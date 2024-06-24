@@ -25,5 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: baseUrl + '/countdown',
         },
+        {
+            url: baseUrl + '/imprint',
+        },
+        {
+            url: baseUrl + '/privacy',
+        },
     ];
 }
