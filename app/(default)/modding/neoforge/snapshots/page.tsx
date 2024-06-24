@@ -76,6 +76,7 @@ export default async function Page(): Promise<ReactElement> {
                 </svg>
                 <span className="font-bold">
                     <Link
+                        className='text-inherit no-underline hover:underline'
                         href="https://neoforged.net/news/neoforge-snapshots/#:~:text=NeoForge%20for%20snapshot%20versions%20is%20not%20intended%20for%20playing."
                         target="_blank"
                     >
@@ -115,7 +116,6 @@ export default async function Page(): Promise<ReactElement> {
                                 </td>
                                 <td className="whitespace-nowrap px-6 py-4 text-sm">
                                     <a
-                                        className="text-sky-300 hover:underline"
                                         href={`https://nexus.themcbrothers.net/repository/neoforged-snapshots/net/neoforged/neoforge/${version}/neoforge-${version}-installer.jar`}
                                         download={`neoforge-${version}-installer.jar`}
                                     >
