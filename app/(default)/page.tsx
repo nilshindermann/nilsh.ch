@@ -7,7 +7,7 @@ export default function Home(): ReactElement {
             <h1 className="font-sans text-4xl font-bold text-primary md:text-6xl">
                 Nils Hindermann
             </h1>
-            <p className="mt-8 text-xl ">
+            <p className="mt-8 text-xl">
                 Hi, ich bin Nils Hindermann 😊
                 <br />
                 Meine Hobbys sind Orientierungslauf & Geocaching.
