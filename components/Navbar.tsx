@@ -10,10 +10,6 @@ const links: { href: string; displayName: string }[] = [
         displayName: 'Über mich',
     },
     {
-        href: '/contact',
-        displayName: 'Kontakt',
-    },
-    {
         href: '/orienteering',
         displayName: 'Orientierungslauf',
     },
@@ -28,7 +24,7 @@ export default function Navbar(): ReactElement {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     return (
-        <div className="navbar bg-neutral text-neutral-content">
+        <div className="navbar sticky top-0 bg-neutral text-neutral-content">
             <div className="flex-1">
                 <div
                     className={

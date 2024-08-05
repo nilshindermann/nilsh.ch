@@ -1,6 +1,6 @@
 {
     "name": "nilsh.ch",
-    "version": "0.3.5",
+    "version": "0.3.6",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@south-paw/react-obfuscate-ts": "latest",
         "dayjs": "latest",
         "next": "latest",
         "react": "latest",
