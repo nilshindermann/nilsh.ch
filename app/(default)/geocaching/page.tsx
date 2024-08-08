@@ -30,7 +30,9 @@ export default function OrienteeringPage(): ReactElement {
                 <Image
                     alt="Project-GC"
                     src="https://cdn2.project-gc.com/ProfileStatsImage/froggy1407"
-                    width="750"
+                    width="0"
+                    height="0"
+                    className="h-auto w-full"
                     unoptimized
                 />
             </Link>
