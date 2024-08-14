@@ -26,6 +26,7 @@ export default function OrienteeringPage(): ReactElement {
             <Link
                 href="https://project-gc.com/ProfileStats/froggy1407"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 <Image
                     alt="Project-GC"
