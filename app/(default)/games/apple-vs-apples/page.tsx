@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     Einige Versionen sind noch vorhanden.`,
 };
 
-export default function ProjectsPage(): ReactElement {
+export default function AppleVsApplesPage(): ReactElement {
     return (
         <>
             <h1 className="mb-5 text-4xl font-bold text-primary">
