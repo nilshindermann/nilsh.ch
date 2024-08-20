@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
 export const metadata: Metadata = {
@@ -19,13 +20,15 @@ export default function GamesPage(): ReactElement {
             <p>
                 <ul>
                     <li>
-                        <a href="/games/apple-vs-apples">Apple vs. Apples</a>
+                        <Link href="/games/apple-vs-apples">
+                            Apple vs. Apples
+                        </Link>
                     </li>
                     <li>
-                        <a href="/games/covid-game">Covid Game</a>
+                        <Link href="/games/covid-game">Covid Game</Link>
                     </li>
                     <li>
-                        <a href="/games/drag-droppy">Drag Droppy</a>
+                        <Link href="/games/drag-droppy">Drag Droppy</Link>
                     </li>
                 </ul>
             </p>

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
 export const metadata: Metadata = {
@@ -15,13 +16,13 @@ export default function DragDroppyPage(): ReactElement {
             </h1>
             <p>
                 Wenn du Drag Droppy spielen willst, besuche die Seite{' '}
-                <a
-                    href="https://drag-droppy.nilsh.ch/"
+                <Link
+                    href="https://dragdroppy.nilsh.ch/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     Drag Droppy
-                </a>
+                </Link>
             </p>
         </>
     );

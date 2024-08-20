@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
 export const metadata: Metadata = {
@@ -26,13 +27,13 @@ export default function AppleVsApplesPage(): ReactElement {
             </p>
             <p>
                 Bis diese Seite noch nicht fertig ist, kannst du das Spiel auf{' '}
-                <a
-                    href="applevsapples.nilsh.ch"
+                <Link
+                    href="https://applevsapples.nilsh.ch"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     applevsapples.nilsh.ch
-                </a>{' '}
+                </Link>{' '}
                 herunterladen.
             </p>
         </>
