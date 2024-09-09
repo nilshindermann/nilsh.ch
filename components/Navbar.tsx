@@ -14,6 +14,10 @@ const links: { href: string; displayName: string }[] = [
         displayName: 'Orientierungslauf',
     },
     {
+        href: '/geocaching',
+        displayName: 'Geocaching',
+    },
+    {
         href: '/projects',
         displayName: 'Projekte',
     },
