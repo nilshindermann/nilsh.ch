@@ -2,7 +2,7 @@ name: Update Dependencies
 
 on:
     schedule:
-        - cron: "0 4 * * 6" # Run every Sunday at midnight
+        - cron: "0 4 * * 6" # Run every Saturday at 4:00 UTC
     workflow_dispatch: # Manual trigger
 
 jobs:
@@ -26,6 +26,9 @@ jobs:
 
           - name: Update dependencies
             run: npm update
+
+          - name: Bump version
+            run: npm version patch
 
           - name: Create pull request
             uses: peter-evans/create-pull-request@v6
