@@ -17,21 +17,17 @@ export default function GamesPage(): ReactElement {
                 anderem das Covid Game und Drag Droppy.
             </p>
 
-            <p>
-                <ul>
-                    <li>
-                        <Link href="/games/apple-vs-apples">
-                            Apple vs. Apples
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/games/covid-game">Covid Game</Link>
-                    </li>
-                    <li>
-                        <Link href="/games/drag-droppy">Drag Droppy</Link>
-                    </li>
-                </ul>
-            </p>
+            <ul>
+                <li>
+                    <Link href="/games/apple-vs-apples">Apple vs. Apples</Link>
+                </li>
+                <li>
+                    <Link href="/games/covid-game">Covid Game</Link>
+                </li>
+                <li>
+                    <Link href="/games/drag-droppy">Drag Droppy</Link>
+                </li>
+            </ul>
         </>
     );
 }
