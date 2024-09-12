@@ -20,6 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: baseUrl + '/orienteering',
         },
         {
+            url: baseUrl + '/geocaching',
+        },
+        {
             url: baseUrl + '/projects',
         },
         {
