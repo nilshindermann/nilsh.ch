@@ -28,7 +28,7 @@ jobs:
             run: npm update
 
           - name: Bump version
-            run: npm version patch
+            run: npm version patch --git-tag-version false
 
           - name: Create pull request
             uses: peter-evans/create-pull-request@v6
