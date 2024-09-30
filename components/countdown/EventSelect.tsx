@@ -1,5 +1,5 @@
+import Link from '@/components/Link';
 import CountdownEvent from '@/models/CountdownEvent';
-import Link from 'next/link';
 import { ReactElement } from 'react';
 
 interface Props {

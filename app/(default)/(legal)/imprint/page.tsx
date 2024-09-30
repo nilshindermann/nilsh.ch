@@ -1,6 +1,6 @@
 import ContactEmail from '@/components/ContactEmail';
+import Link from '@/components/Link';
 import { Metadata } from 'next';
-import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
 export const metadata: Metadata = {
@@ -64,13 +64,7 @@ export default function ImprintPage(): ReactElement {
                 <br />
                 <br />
                 <strong>Quelle</strong>:{' '}
-                <Link
-                    href="https://brainbox.swiss/"
-                    rel="nofollow"
-                    target="_blank"
-                >
-                    BrainBox Solutions
-                </Link>
+                <Link href="https://brainbox.swiss/">BrainBox Solutions</Link>
             </div>
         </>
     );

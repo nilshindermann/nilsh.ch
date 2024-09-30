@@ -1,5 +1,5 @@
+import Link from '@/components/Link';
 import SocialMediaLinks from '@/components/SocialMediaLinks';
-import Link from 'next/link';
 import { ReactElement } from 'react';
 
 const links: { href: string; displayName: string }[] = [

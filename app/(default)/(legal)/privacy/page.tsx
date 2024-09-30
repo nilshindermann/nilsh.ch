@@ -1,6 +1,6 @@
+import Link from '@/components/Link';
 import ObfuscateText from '@/components/ObfuscateText';
 import { Metadata } from 'next';
-import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
 export const metadata: Metadata = {
@@ -404,11 +404,7 @@ export default function PrivacyPage(): ReactElement {
                 <br />
                 <h3>BrainBox Generatoren</h3> BrainBox Generatoren ist ein
                 Dienst der{' '}
-                <Link
-                    href="https://brainbox.swiss/"
-                    rel="nofollow"
-                    target="_blank"
-                >
+                <Link href="https://brainbox.swiss/">
                     BrainBox Solutions GmbH
                 </Link>
                 , um alle datenschutzrelevanten Dienste auf einer Website zu

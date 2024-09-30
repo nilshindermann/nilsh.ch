@@ -1,6 +1,6 @@
+import Link from '@/components/Link';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
 export const metadata: Metadata = {
@@ -23,11 +23,7 @@ export default function OrienteeringPage(): ReactElement {
             <h2 className="mt-5 text-2xl font-bold text-secondary">
                 Meine Statistiken
             </h2>
-            <Link
-                href="https://project-gc.com/ProfileStats/froggy1407"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <Link href="https://project-gc.com/ProfileStats/froggy1407">
                 <Image
                     alt="Project-GC"
                     src="https://cdn2.project-gc.com/ProfileStatsImage/froggy1407"
