@@ -28,7 +28,7 @@ export default function Navbar(): ReactElement {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     return (
-        <div className="navbar sticky top-0 bg-neutral text-neutral-content">
+        <div className="navbar sticky top-0 z-10 bg-neutral text-neutral-content">
             <div className="flex-1">
                 <div
                     className={
