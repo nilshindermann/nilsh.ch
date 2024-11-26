@@ -39,7 +39,7 @@ export default function OrienteeringPage(): ReactElement {
                             {' '}
                             {currentSeason.additionalCategories.length === 1
                                 ? 'Zusätzlich laufe ich in der Kategorie '
-                                : 'Zusätzlich laufe ich in den Kategorien '}{' '}
+                                : 'Zusätzlich laufe ich in den Kategorien '}
                             {currentSeason.additionalCategories.join(', ')}.
                         </>
                     )}
