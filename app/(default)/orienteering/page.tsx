@@ -49,8 +49,8 @@ export default function OrienteeringPage(): ReactElement {
                 Vergangene Saisons
             </h2>
             <ul>
-                {seasons
-                    .toReversed()
+                {[...seasons]
+                    .reverse()
                     .filter((season) => season !== currentSeason)
                     .map((season) => (
                         <li key={season.year}>
