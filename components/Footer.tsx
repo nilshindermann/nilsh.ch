@@ -33,7 +33,7 @@ export default function Footer(): ReactElement {
             </nav>
             <SocialMediaLinks />
             <aside>
-                <p>Copyright &copy; 2024 - Nils Hindermann</p>
+                <p>Copyright &copy; 2025 - Nils Hindermann</p>
             </aside>
         </footer>
     );
