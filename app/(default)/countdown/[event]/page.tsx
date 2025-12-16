@@ -42,7 +42,7 @@ export default function CountdownPage({ params }: Props): ReactElement {
 
     return (
         <>
-            <h1 className="mb-5 text-4xl font-bold text-primary">
+            <h1 className="text-primary mb-5 text-4xl font-bold">
                 {event.name}
             </h1>
             <Countdown event={event.date} />

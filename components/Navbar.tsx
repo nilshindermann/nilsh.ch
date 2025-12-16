@@ -28,7 +28,7 @@ export default function Navbar(): ReactElement {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     return (
-        <div className="navbar sticky top-0 bg-neutral text-neutral-content">
+        <div className="navbar bg-neutral text-neutral-content sticky top-0">
             <div className="flex-1">
                 <div
                     className={
@@ -68,7 +68,7 @@ export default function Navbar(): ReactElement {
                     <ul
                         tabIndex={0}
                         className={
-                            'menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-200 p-2 shadow lg:hidden' +
+                            'menu dropdown-content menu-sm rounded-box bg-base-200 z-[1] mt-3 w-52 p-2 shadow lg:hidden' +
                             (!menuOpen ? ' hidden' : '')
                         }
                     >

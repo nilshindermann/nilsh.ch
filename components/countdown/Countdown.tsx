@@ -60,7 +60,7 @@ export default function Countdown({
     return (
         <div className="grid auto-cols-max grid-flow-col gap-2 text-center sm:gap-3 lg:gap-4">
             {time.years > 0 && (
-                <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
+                <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
                     <span className="countdown font-mono text-5xl">
                         <span
                             style={{ '--value': time.years } as CSSProperties}
@@ -70,7 +70,7 @@ export default function Countdown({
                 </div>
             )}
             {time.months > 0 && (
-                <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
+                <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
                     <span className="countdown font-mono text-5xl">
                         <span
                             style={{ '--value': time.months } as CSSProperties}
@@ -80,7 +80,7 @@ export default function Countdown({
                 </div>
             )}
             {time.days > 0 && (
-                <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
+                <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
                     <span className="countdown font-mono text-5xl">
                         <span
                             style={{ '--value': time.days } as CSSProperties}
@@ -89,7 +89,7 @@ export default function Countdown({
                     Tage
                 </div>
             )}
-            <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
+            <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
                 <span className="countdown font-mono text-5xl">
                     <span
                         style={{ '--value': time.hours } as CSSProperties}
@@ -97,7 +97,7 @@ export default function Countdown({
                 </span>
                 Std
             </div>
-            <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
+            <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
                 <span className="countdown font-mono text-5xl">
                     <span
                         style={{ '--value': time.minutes } as CSSProperties}
@@ -105,7 +105,7 @@ export default function Countdown({
                 </span>
                 Min
             </div>
-            <div className="flex flex-col rounded-box bg-neutral p-2 text-neutral-content">
+            <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
                 <span className="countdown font-mono text-5xl">
                     <span
                         style={{ '--value': time.seconds } as CSSProperties}

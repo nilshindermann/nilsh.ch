@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function OrienteeringPage(): ReactElement {
     return (
         <>
-            <h1 className="mb-5 text-4xl font-bold text-primary">Geocaching</h1>
+            <h1 className="text-primary mb-5 text-4xl font-bold">Geocaching</h1>
             <p>
                 Seit Mai 2018 bin ich begeisterter Geocacher. Ich bin
                 hauptsächlich in der Schweiz unterwegs und habe bereits über
@@ -20,7 +20,7 @@ export default function OrienteeringPage(): ReactElement {
                 <br />
                 Mein Nickname ist <b>froggy1407</b>.
             </p>
-            <h2 className="mt-5 text-2xl font-bold text-secondary">
+            <h2 className="text-secondary mt-5 text-2xl font-bold">
                 Meine Statistiken
             </h2>
             <Link

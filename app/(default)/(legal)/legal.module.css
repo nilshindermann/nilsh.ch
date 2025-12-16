@@ -11,7 +11,7 @@
 }
 
 .legal h1 {
-    @apply mb-5 text-center text-4xl font-bold text-primary;
+    @apply text-primary mb-5 text-center text-4xl font-bold;
 }
 
 .legal h2 {

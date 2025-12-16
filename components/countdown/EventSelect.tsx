@@ -31,7 +31,7 @@ export default function EventSelect({
             </div>
             <ul
                 tabIndex={0}
-                className="menu dropdown-content z-[1] w-52 rounded-box bg-neutral p-2 shadow"
+                className="menu dropdown-content rounded-box bg-neutral z-[1] w-52 p-2 shadow"
             >
                 {events
                     .filter((e) => !current || e.slug !== current.slug)

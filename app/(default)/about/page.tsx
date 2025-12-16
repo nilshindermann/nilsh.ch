@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage(): ReactElement {
     return (
         <>
-            <h1 className="mb-5 text-4xl font-bold text-primary">Über mich</h1>
+            <h1 className="text-primary mb-5 text-4xl font-bold">Über mich</h1>
             <p className="mb-1">
                 Ich bin ein junger Softwareentwickler aus Zürich.
             </p>
