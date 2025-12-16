@@ -6,7 +6,9 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "prettier-check": "prettier . --check",
+        "prettier-write": "prettier . --write"
     },
     "dependencies": {
         "dayjs": "^1",
@@ -18,13 +20,14 @@
         "@cloudflare/next-on-pages": "latest",
         "@eslint/eslintrc": "^3",
         "@eslint/js": "^9",
+        "@tailwindcss/postcss": "^4",
         "@types/node": "^20",
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "@typescript-eslint/eslint-plugin": "^8",
         "@typescript-eslint/parser": "^8",
         "autoprefixer": "^10",
-        "daisyui": "^4",
+        "daisyui": "^5",
         "eslint": "^9",
         "eslint-config-next": "^15",
         "eslint-config-prettier": "^10",
@@ -34,7 +37,7 @@
         "prettier": "^3",
         "prettier-plugin-import-sort": "latest",
         "prettier-plugin-tailwindcss": "latest",
-        "tailwindcss": "^3",
+        "tailwindcss": "^4",
         "typescript": "latest"
     },
     "importSort": {
