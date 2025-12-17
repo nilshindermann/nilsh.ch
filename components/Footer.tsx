@@ -19,7 +19,7 @@ const links: { href: string; displayName: string }[] = [
 
 export default function Footer(): ReactElement {
     return (
-        <footer className="footer footer-center rounded bg-neutral p-10 text-neutral-content">
+        <footer className="footer footer-horizontal footer-center bg-neutral text-neutral-content rounded p-10">
             <nav className="grid grid-flow-col gap-4">
                 {links.map(({ href, displayName }) => (
                     <Link

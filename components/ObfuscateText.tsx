@@ -1,7 +1,7 @@
 'use client';
 
-import { Obfuscate } from '@south-paw/react-obfuscate-ts';
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
+import NoSSR from '@/components/no-ssr';
 
 interface ObfuscateTextProps {
     children: string;
@@ -11,9 +11,13 @@ export default function ObfuscateText({
     children,
     ...props
 }: ObfuscateTextProps): ReactElement {
-    return (
-        <Obfuscate as={'span'} {...props}>
-            {children}
-        </Obfuscate>
-    );
+    const [text, setText] = useState('');
+
+    useEffect(() => {
+        const realText = children;
+        const timeoutId = setTimeout(() => setText(realText), 1000);
+        return () => clearTimeout(timeoutId);
+    }, []);
+
+    return <NoSSR {...props}>{text}</NoSSR>;
 }

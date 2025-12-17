@@ -6,7 +6,7 @@ import { events } from './events';
 export default function CountdownPage(): ReactElement {
     return (
         <>
-            <h1 className="mb-5 text-4xl font-bold text-primary">Countdown</h1>
+            <h1 className="text-primary mb-5 text-4xl font-bold">Countdown</h1>
             <p>
                 Willkommen auf der Countdown-Seite. Hier kannst du ein Ereignis
                 auswählen, für das du einen Countdown sehen möchtest.

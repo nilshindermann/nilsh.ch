@@ -1,7 +1,7 @@
 'use client';
 
-import { Obfuscate } from '@south-paw/react-obfuscate-ts';
-import { ReactElement } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
+import NoSSR from '@/components/no-ssr';
 
 interface ContactEmailProps {
     email: string;
@@ -10,14 +10,13 @@ interface ContactEmailProps {
 export default function ContactEmail({
     email,
 }: ContactEmailProps): ReactElement {
-    return (
-        <Obfuscate
-            email={email}
-            obfuscateText="https://www.nilsh.ch/privacy"
-            aria-label="Email address is obfuscated, focus to reveal"
-            className="text-inherit"
-        >
-            {email}
-        </Obfuscate>
-    );
+    const [displayEmail, setDisplayEmail] = useState('');
+
+    useEffect(() => {
+        const realEmail = email;
+        const timeoutId = setTimeout(() => setDisplayEmail(realEmail), 1000);
+        return () => clearTimeout(timeoutId);
+    }, []);
+
+    return <NoSSR className="text-inherit">{displayEmail}</NoSSR>;
 }
