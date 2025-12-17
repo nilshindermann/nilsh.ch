@@ -32,7 +32,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     };
 }
 
-export default async function CountdownPage(props: Props): Promise<ReactElement> {
+export default async function CountdownPage(
+    props: Props,
+): Promise<ReactElement> {
     const params = await props.params;
     const event = findEvent(params.event);
 
