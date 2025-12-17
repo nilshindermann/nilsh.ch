@@ -11,14 +11,15 @@ import { events } from '../events';
 export const runtime = 'edge';
 
 interface Props {
-    params: { event: string };
+    params: Promise<{ event: string }>;
 }
 
 function findEvent(slug: string): CountdownEvent | undefined {
     return events.find((e) => e.slug === slug);
 }
 
-export function generateMetadata({ params }: Props): Metadata {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params = await props.params;
     const event = findEvent(params.event);
 
     if (!event) {
@@ -31,7 +32,8 @@ export function generateMetadata({ params }: Props): Metadata {
     };
 }
 
-export default function CountdownPage({ params }: Props): ReactElement {
+export default async function CountdownPage(props: Props): Promise<ReactElement> {
+    const params = await props.params;
     const event = findEvent(params.event);
 
     if (!event) {
