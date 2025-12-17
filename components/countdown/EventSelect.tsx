@@ -40,6 +40,7 @@ export default function EventSelect({
                             <Link
                                 href={`${path}/${e.slug}`}
                                 rel="nofollow"
+                                className="text-inherit no-underline"
                                 scroll={false}
                             >
                                 {e.name}

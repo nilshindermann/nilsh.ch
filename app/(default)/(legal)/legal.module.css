@@ -1,3 +1,6 @@
+@reference 'tailwindcss';
+@reference '../../globals.css';
+
 .legal {
     @apply max-w-3xl p-4 text-left;
 }

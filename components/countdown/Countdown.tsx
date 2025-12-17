@@ -58,57 +58,88 @@ export default function Countdown({
     }, [calcTime]);
 
     return (
-        <div className="grid auto-cols-max grid-flow-col gap-2 text-center sm:gap-3 lg:gap-4">
+        <div className="grid auto-cols-max grid-flow-col gap-5 text-center">
             {time.years > 0 && (
-                <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
+                <div className="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
                     <span className="countdown font-mono text-5xl">
                         <span
-                            style={{ '--value': time.years } as CSSProperties}
+                            style={
+                                {
+                                    '--value': time.years,
+                                } as CSSProperties
+                            }
+                            aria-live="polite"
                         ></span>
                     </span>
                     Jahre
                 </div>
             )}
             {time.months > 0 && (
-                <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
+                <div className="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
                     <span className="countdown font-mono text-5xl">
                         <span
-                            style={{ '--value': time.months } as CSSProperties}
+                            style={
+                                {
+                                    '--value': time.months,
+                                } as CSSProperties
+                            }
+                            aria-live="polite"
                         ></span>
                     </span>
                     Monate
                 </div>
             )}
             {time.days > 0 && (
-                <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
+                <div className="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
                     <span className="countdown font-mono text-5xl">
                         <span
-                            style={{ '--value': time.days } as CSSProperties}
+                            style={
+                                {
+                                    '--value': time.days,
+                                } as CSSProperties
+                            }
+                            aria-live="polite"
                         ></span>
                     </span>
                     Tage
                 </div>
             )}
-            <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
+            <div className="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
                 <span className="countdown font-mono text-5xl">
                     <span
-                        style={{ '--value': time.hours } as CSSProperties}
+                        style={
+                            {
+                                '--value': time.hours,
+                                '--digits': 2,
+                            } as CSSProperties
+                        }
+                        aria-live="polite"
                     ></span>
                 </span>
                 Std
             </div>
-            <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
+            <div className="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
                 <span className="countdown font-mono text-5xl">
                     <span
-                        style={{ '--value': time.minutes } as CSSProperties}
+                        style={
+                            {
+                                '--value': time.minutes,
+                                '--digits': 2,
+                            } as CSSProperties
+                        }
                     ></span>
                 </span>
                 Min
             </div>
-            <div className="rounded-box bg-neutral text-neutral-content flex flex-col p-2">
+            <div className="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
                 <span className="countdown font-mono text-5xl">
                     <span
-                        style={{ '--value': time.seconds } as CSSProperties}
+                        style={
+                            {
+                                '--value': time.seconds,
+                                '--digits': 2,
+                            } as CSSProperties
+                        }
                     ></span>
                 </span>
                 Sek
