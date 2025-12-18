@@ -8,8 +8,6 @@ import { ReactElement } from 'react';
 
 import { events } from '../events';
 
-export const runtime = 'edge';
-
 interface Props {
     params: Promise<{ event: string }>;
 }

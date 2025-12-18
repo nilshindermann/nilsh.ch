@@ -1,0 +1,24 @@
+main = ".open-next/worker.js"
+name = "nilsh"
+compatibility_date = "2025-12-17"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+not_found_handling = "404-page"
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = false
+head_sampling_rate = 1

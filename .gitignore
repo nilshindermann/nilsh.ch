@@ -17,6 +17,8 @@
 
 # production
 /build
+/.open-next/
+/.wrangler/
 
 # misc
 .DS_Store
@@ -36,5 +38,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+cloudflare-env.d.ts
 
 certificates
