@@ -16,7 +16,7 @@ export default function OrienteeringPage(): ReactElement {
             <p>
                 Seit Mai 2018 bin ich begeisterter Geocacher. Ich bin
                 hauptsächlich in der Schweiz unterwegs und habe bereits über
-                7000 Funde.
+                9000 Funde.
                 <br />
                 Mein Nickname ist <b>froggy1407</b>.
             </p>
