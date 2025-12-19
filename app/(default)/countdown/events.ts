@@ -1,4 +1,4 @@
-import CountdownEvent from '@/models/CountdownEvent';
+import { CountdownEvent } from '@/models/events';
 
 export const events: Array<CountdownEvent> = [
     {

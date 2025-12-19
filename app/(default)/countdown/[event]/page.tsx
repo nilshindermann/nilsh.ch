@@ -1,15 +1,19 @@
-import Countdown from '@/components/countdown/Countdown';
-import EventSelect from '@/components/countdown/EventSelect';
-import CountdownEvent from '@/models/CountdownEvent';
-import { getDayJsFromEvent } from '@/models/EventDate';
+import Countdown from '@/components/countdown/countdown';
+import EventSelect from '@/components/countdown/event-select';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ReactElement } from 'react';
 
 import { events } from '../events';
+import { formatEventDate } from '@/lib/events';
+import { CountdownEvent } from '@/models/events';
+
+interface Params {
+    event: string;
+}
 
 interface Props {
-    params: Promise<{ event: string }>;
+    params: Promise<Params>;
 }
 
 function findEvent(slug: string): CountdownEvent | undefined {
@@ -17,8 +21,8 @@ function findEvent(slug: string): CountdownEvent | undefined {
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-    const params = await props.params;
-    const event = findEvent(params.event);
+    const params: Params = await props.params;
+    const event: CountdownEvent | undefined = findEvent(params.event);
 
     if (!event) {
         notFound();
@@ -40,14 +44,14 @@ export default async function CountdownPage(
         notFound();
     }
 
-    const formattedDate: string = getDayJsFromEvent(event.date).format('LL');
+    const formattedDate: string = formatEventDate(event);
 
     return (
         <>
             <h1 className="text-primary mb-5 text-4xl font-bold">
                 {event.name}
             </h1>
-            <Countdown event={event.date} />
+            <Countdown event={event} />
             <p className="my-2">{formattedDate}</p>
             <EventSelect events={events} current={event} />
         </>
