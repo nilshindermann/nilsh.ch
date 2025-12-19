@@ -1,6 +1,5 @@
 'use client';
 
-import EventDate, { getDayJsFromEvent } from '@/models/EventDate';
 import dayjs, { Dayjs } from 'dayjs';
 import { Duration } from 'dayjs/plugin/duration';
 import {
@@ -10,6 +9,8 @@ import {
     useEffect,
     useState,
 } from 'react';
+import { getDayJsFromEvent } from '@/lib/events';
+import { CountdownEvent } from '@/models/events';
 
 interface DisplayTime {
     years: number;
@@ -23,11 +24,11 @@ interface DisplayTime {
 export default function Countdown({
     event,
 }: {
-    event: EventDate;
+    event: CountdownEvent;
 }): ReactElement {
     const calcTime = useCallback((): DisplayTime => {
-        const now: Dayjs = dayjs(new Date()).utc();
-        const then: Dayjs = getDayJsFromEvent(event).utc();
+        const now: Dayjs = dayjs(new Date());
+        const then: Dayjs = getDayJsFromEvent(event, now);
         const diff: Duration = dayjs.duration(then.diff(now));
 
         const years = diff.years();
@@ -51,10 +52,7 @@ export default function Countdown({
 
     useEffect(() => {
         const interval = setInterval(() => setTime(calcTime), 1000);
-
-        return () => {
-            clearInterval(interval);
-        };
+        return () => clearInterval(interval);
     }, [calcTime]);
 
     return (
