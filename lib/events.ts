@@ -63,4 +63,5 @@ export const formatEventDate = (event: CountdownEvent): string => {
     return getDayJsFromEvent(event).format('LL');
 };
 
-export const getDayJsNow = (): Dayjs => dayjs().tz('Europe/Zurich');
+export const getDayJsNow = (): Dayjs =>
+    dayjs().locale(locale_de).tz('Europe/Zurich');
