@@ -29,8 +29,8 @@ export const events: Array<CountdownEvent> = [
         slug: 'august',
         name: '1. August',
         date: {
-            day: 24,
-            month: 12,
+            day: 1,
+            month: 8,
         },
     },
     {
