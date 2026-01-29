@@ -5,9 +5,7 @@ import { notFound } from 'next/navigation';
 import { ReactElement } from 'react';
 
 import { events } from '../events';
-import { getDayJsFromEvent } from '@/lib/events';
 import { CountdownEvent } from '@/models/events';
-import { FormattedDate } from '@/components/countdown/formatted-date';
 
 interface Params {
     event: string;
@@ -45,15 +43,12 @@ export default async function CountdownPage(
         notFound();
     }
 
-    const eventDate = getDayJsFromEvent(event);
-
     return (
         <>
             <h1 className="text-primary mb-5 text-4xl font-bold">
                 {event.name}
             </h1>
-            <Countdown event={event} />
-            <FormattedDate date={eventDate.toJSON()} />
+            <Countdown event={event} showDate={true} />
             <EventSelect events={events} current={event} />
         </>
     );
