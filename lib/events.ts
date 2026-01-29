@@ -14,29 +14,18 @@ dayjs.extend(relativeTime);
 dayjs.extend(timezone);
 dayjs.extend(utc);
 
-export const getDayJsFromEvent = (
-    event: CountdownEvent,
-    nowTime?: Dayjs,
-): Dayjs => {
-    const eventDate = event.date;
+// Default locale: DE
+dayjs.locale(locale_de);
 
-    const now: Dayjs = nowTime ?? getDayJsNow();
-    const target: Dayjs = dayjs()
-        .locale(locale_de)
-        .tz('Europe/Zurich')
-        .set('year', eventDate.year ?? now.year())
-        .set('month', eventDate.month - 1)
-        .set('date', eventDate.day)
-        .set('hour', eventDate.hour ?? 0)
-        .set('minute', eventDate.minute ?? 0)
-        .set('second', eventDate.second ?? 0)
-        .set('millisecond', 0);
-
-    const eventEnd: Dayjs = dayjs(target)
-        .add(event.duration?.days ?? 0, 'days')
-        .add(event.duration?.hours ?? 0, 'hours')
-        .add(event.duration?.minutes ?? 0, 'minutes')
-        .add(event.duration?.seconds ?? 0, 'seconds');
+export const getDayJsFromEvent = (event: CountdownEvent): Dayjs => {
+    const parseDate: Dayjs = dayjs(event.date);
+    const now: Dayjs = dayjs(); // Timezone?
+    const isYearDefined: boolean = parseDate.year() !== 1900;
+    const target: Dayjs = parseDate.set(
+        'year',
+        isYearDefined ? parseDate.year() : now.year(),
+    );
+    const eventEnd: Dayjs = dayjs(target).add(dayjs.duration(event.duration));
 
     if (now.isBefore(target, 'seconds')) {
         // current time is before the event
@@ -48,20 +37,5 @@ export const getDayJsFromEvent = (
         return now;
     }
 
-    return eventDate.year ? now : target.add(1, 'year');
+    return isYearDefined ? now : target.add(1, 'year');
 };
-
-export const formatEventDate = (event: CountdownEvent): string => {
-    if (
-        event.date.hour !== undefined ||
-        event.date.minute !== undefined ||
-        event.date.second !== undefined
-    ) {
-        return getDayJsFromEvent(event).format('LLL');
-    }
-
-    return getDayJsFromEvent(event).format('LL');
-};
-
-export const getDayJsNow = (): Dayjs =>
-    dayjs().locale(locale_de).tz('Europe/Zurich');

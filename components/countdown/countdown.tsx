@@ -9,7 +9,7 @@ import {
     useEffect,
     useState,
 } from 'react';
-import { getDayJsFromEvent, getDayJsNow } from '@/lib/events';
+import { getDayJsFromEvent } from '@/lib/events';
 import { CountdownEvent } from '@/models/events';
 
 interface DisplayTime {
@@ -27,8 +27,8 @@ export default function Countdown({
     event: CountdownEvent;
 }): ReactElement {
     const calcTime = useCallback((): DisplayTime => {
-        const now: Dayjs = getDayJsNow();
-        const then: Dayjs = getDayJsFromEvent(event, now);
+        const then: Dayjs = getDayJsFromEvent(event);
+        const now: Dayjs = dayjs(); // Timezone?
         const diff: Duration = dayjs.duration(then.diff(now));
 
         const years = diff.years();
