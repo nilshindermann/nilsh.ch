@@ -22,13 +22,8 @@ export default function AboutPage(): ReactElement {
                 event={{
                     slug: 'about',
                     name: 'Geburtstag',
-                    date: {
-                        day: 14,
-                        month: 7,
-                    },
-                    duration: {
-                        days: 1,
-                    },
+                    date: '0000-07-14T00:00:00',
+                    duration: 'P1D',
                 }}
             />
         </>
