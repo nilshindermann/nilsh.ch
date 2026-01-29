@@ -39,3 +39,12 @@ export const getDayJsFromEvent = (event: CountdownEvent): Dayjs => {
 
     return isYearDefined ? now : target.add(1, 'year');
 };
+
+export const formatDate = (date: Dayjs): string => {
+    const template: string =
+        date.hour() !== 0 || date.minute() !== 0 || date.second() !== 0
+            ? 'LLL'
+            : 'LL';
+
+    return date.tz(dayjs.tz.guess()).format(template);
+};

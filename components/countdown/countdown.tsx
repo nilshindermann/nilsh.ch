@@ -9,7 +9,7 @@ import {
     useEffect,
     useState,
 } from 'react';
-import { getDayJsFromEvent } from '@/lib/events';
+import { formatDate, getDayJsFromEvent } from '@/lib/events';
 import { CountdownEvent } from '@/models/events';
 
 interface DisplayTime {
@@ -42,7 +42,7 @@ export default function Countdown({
         const hours = diff.hours();
         const minutes = diff.minutes();
         const seconds = diff.seconds();
-        const formattedDate = then.tz(dayjs.tz.guess()).format('LLL');
+        const formattedDate = formatDate(then);
 
         return {
             years: Math.abs(years),
