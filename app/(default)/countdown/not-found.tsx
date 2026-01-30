@@ -1,4 +1,4 @@
-import EventSelect from '@/components/countdown/EventSelect';
+import EventSelect from '@/components/countdown/event-select';
 import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
 

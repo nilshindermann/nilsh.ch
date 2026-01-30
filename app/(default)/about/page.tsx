@@ -1,4 +1,4 @@
-import Countdown from '@/components/countdown/Countdown';
+import Countdown from '@/components/countdown/countdown';
 import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
 
@@ -15,10 +15,17 @@ export default function AboutPage(): ReactElement {
             <p className="mb-1">
                 Ich bin ein junger Softwareentwickler aus Zürich.
             </p>
-            <h2 className="text-lg font-semibold">
+            <h2 className="py-1 text-lg font-semibold">
                 Zeit bis zu meinem nächsten Geburtstag
             </h2>
-            <Countdown event={{ month: 7, day: 14 }} />
+            <Countdown
+                event={{
+                    slug: 'about',
+                    name: 'Geburtstag',
+                    date: '0000-07-14T00:00:00',
+                    duration: 'P1D',
+                }}
+            />
         </>
     );
 }
