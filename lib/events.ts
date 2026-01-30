@@ -19,7 +19,7 @@ dayjs.locale(locale_de);
 
 export const getDayJsFromEvent = (event: CountdownEvent): Dayjs => {
     const parseDate: Dayjs = dayjs(event.date);
-    const now: Dayjs = dayjs(); // Timezone?
+    const now: Dayjs = dayjs();
     const isYearDefined: boolean = parseDate.year() !== 1900;
     const target: Dayjs = parseDate.set(
         'year',
