@@ -62,4 +62,8 @@ export const seasons: Array<Season> = [
         year: 2025,
         category: 'HAM',
     },
+    {
+        year: 2026,
+        category: 'HAK',
+    },
 ];
