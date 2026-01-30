@@ -14,6 +14,10 @@ export default function OrienteeringPage(): ReactElement {
         (season) => season.year === new Date().getFullYear(),
     );
 
+    const buildLink = (category: string, year: number): string => {
+        return `https://www.o-l.ch/cgi-bin/pliste?cat=${category}&result=list&year=${year}#:~:text=Nils%20Hindermann`;
+    };
+
     return (
         <>
             <h1 className="text-primary mb-5 text-4xl font-bold">
@@ -28,7 +32,10 @@ export default function OrienteeringPage(): ReactElement {
                     <b>{currentSeason.category}</b> mit dem Ziel, ein gutes
                     Resultat in der{' '}
                     <Link
-                        href={`https://www.o-l.ch/cgi-bin/pliste?cat=${currentSeason.category}&result=list&year=${currentSeason.year}`}
+                        href={buildLink(
+                            currentSeason.category,
+                            currentSeason.year,
+                        )}
                         target="_blank"
                     >
                         Jahrespunkteliste
@@ -45,37 +52,57 @@ export default function OrienteeringPage(): ReactElement {
                     )}
                 </p>
             )) || <p>Ich habe keine aktive Saison.</p>}
-            <h2 className="mt-5 text-2xl font-bold text-primary">
+            <h2 className="text-primary mt-5 text-2xl font-bold">
                 Vergangene Saisons
             </h2>
-            <ul>
-                {[...seasons]
-                    .reverse()
-                    .filter((season) => season !== currentSeason)
-                    .map((season) => (
-                        <li key={season.year}>
-                            <p>
-                                <span className="text-primary">
-                                    {season.year}
-                                </span>{' '}
-                                &ndash; <b>{season.category}</b>
-                                {season.additionalCategories && (
-                                    <>
-                                        ,{' '}
-                                        {season.additionalCategories.join(', ')}
-                                    </>
-                                )}{' '}
-                                &ndash;{' '}
-                                <Link
-                                    href={`https://www.o-l.ch/cgi-bin/pliste?cat=${season.category}&result=list&year=${season.year}`}
-                                    target="_blank"
-                                >
-                                    Jahrespunkteliste
-                                </Link>
-                            </p>
-                        </li>
-                    ))}
-            </ul>
+
+            <div className="max-w-full overflow-x-auto">
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th>Jahr</th>
+                            <th>Kategorie(n)</th>
+                            <th>Links</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {[...seasons]
+                            .reverse()
+                            .filter((season) => season !== currentSeason)
+                            .map((season) => (
+                                <tr key={season.year}>
+                                    <td>
+                                        <span className="text-primary">
+                                            {season.year}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <b>{season.category}</b>
+                                        {season.additionalCategories && (
+                                            <>
+                                                ,{' '}
+                                                {season.additionalCategories.join(
+                                                    ', ',
+                                                )}
+                                            </>
+                                        )}
+                                    </td>
+                                    <td>
+                                        <Link
+                                            href={buildLink(
+                                                season.category,
+                                                season.year,
+                                            )}
+                                            target="_blank"
+                                        >
+                                            Jahrespunkteliste
+                                        </Link>
+                                    </td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
+            </div>
         </>
     );
 }
