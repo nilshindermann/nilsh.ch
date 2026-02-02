@@ -1,6 +1,6 @@
-import CountdownEvent from '@/models/CountdownEvent';
 import Link from 'next/link';
 import { ReactElement } from 'react';
+import { CountdownEvent } from '@/models/events';
 
 interface Props {
     events: Array<CountdownEvent>;
@@ -31,7 +31,7 @@ export default function EventSelect({
             </div>
             <ul
                 tabIndex={0}
-                className="menu dropdown-content z-[1] w-52 rounded-box bg-neutral p-2 shadow"
+                className="menu dropdown-content rounded-box bg-neutral z-1 w-52 p-2 shadow"
             >
                 {events
                     .filter((e) => !current || e.slug !== current.slug)
@@ -40,6 +40,7 @@ export default function EventSelect({
                             <Link
                                 href={`${path}/${e.slug}`}
                                 rel="nofollow"
+                                className="text-inherit no-underline"
                                 scroll={false}
                             >
                                 {e.name}
