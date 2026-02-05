@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage(): ReactElement {
     return (
         <>
-            <h1 className="mb-5 text-4xl font-bold text-primary">Projekte</h1>
+            <h1 className="text-primary mb-5 text-4xl font-bold">Projekte</h1>
             <div className="max-w-3xl text-left">
                 <p>
                     Hier findest du eine Übersicht aller Projekte, an denen ich
@@ -28,7 +28,7 @@ export default function ProjectsPage(): ReactElement {
                     </Link>{' '}
                     veröffentlicht habe.
                 </p>
-                <h2 className="mt-5 text-xl font-bold text-secondary">
+                <h2 className="text-secondary mt-5 text-xl font-bold">
                     Aktuelle Projekte
                 </h2>
                 <ul className="list-outside list-disc pl-5">
@@ -51,7 +51,7 @@ export default function ProjectsPage(): ReactElement {
                         </Link>
                     </li>
                 </ul>
-                <h2 className="mt-5 text-xl font-bold text-secondary">
+                <h2 className="text-secondary mt-5 text-xl font-bold">
                     Vergangene Projekte
                 </h2>
                 <ul className="list-outside list-disc pl-5">
