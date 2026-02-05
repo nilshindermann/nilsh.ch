@@ -8,7 +8,7 @@ export default function Home(): ReactElement {
     return (
         <>
             <Image className="mb-8" src={logo} alt="nils hindermann" />
-            <h1 className="font-sans text-4xl font-bold text-primary">
+            <h1 className="text-primary font-sans text-4xl font-bold">
                 Willkommen bei Nils&nbsp;Hindermann
             </h1>
             <p className="mt-8 text-xl">

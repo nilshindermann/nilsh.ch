@@ -1,0 +1,41 @@
+name: Update Dependencies
+
+on:
+    schedule:
+        - cron: "0 4 * * 6" # Run every Saturday at 4:00 UTC
+    workflow_dispatch: # Manual trigger
+
+jobs:
+    update-dependencies:
+        runs-on: ubuntu-latest
+        permissions: write-all
+
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v4
+            with:
+                fetch-depth: 0
+
+          - name: Set up Node.js
+            uses: actions/setup-node@v4
+            with:
+                node-version: 20
+
+          - name: Install dependencies
+            run: npm ci
+
+          - name: Update dependencies
+            run: npm update
+
+          - name: Bump version
+            run: npm version patch --git-tag-version false
+
+          - name: Create pull request
+            uses: peter-evans/create-pull-request@v6
+            with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                commit-message: "Update dependencies"
+                title: "Update dependencies"
+                body: "This pull request updates the npm dependencies."
+                branch: update/dependencies
+                base: main

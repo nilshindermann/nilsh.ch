@@ -1,25 +1,27 @@
-import Countdown from '@/components/countdown/Countdown';
-import EventSelect from '@/components/countdown/EventSelect';
-import CountdownEvent from '@/models/CountdownEvent';
-import { getDayJsFromEvent } from '@/models/EventDate';
+import Countdown from '@/components/countdown/countdown';
+import EventSelect from '@/components/countdown/event-select';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ReactElement } from 'react';
 
 import { events } from '../events';
+import { CountdownEvent } from '@/models/events';
 
-export const runtime = 'edge';
+interface Params {
+    event: string;
+}
 
 interface Props {
-    params: { event: string };
+    params: Promise<Params>;
 }
 
 function findEvent(slug: string): CountdownEvent | undefined {
     return events.find((e) => e.slug === slug);
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-    const event = findEvent(params.event);
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params: Params = await props.params;
+    const event: CountdownEvent | undefined = findEvent(params.event);
 
     if (!event) {
         notFound();
@@ -31,22 +33,22 @@ export function generateMetadata({ params }: Props): Metadata {
     };
 }
 
-export default function CountdownPage({ params }: Props): ReactElement {
+export default async function CountdownPage(
+    props: Props,
+): Promise<ReactElement> {
+    const params = await props.params;
     const event = findEvent(params.event);
 
     if (!event) {
         notFound();
     }
 
-    const formattedDate: string = getDayJsFromEvent(event.date).format('LL');
-
     return (
         <>
-            <h1 className="mb-5 text-4xl font-bold text-primary">
+            <h1 className="text-primary mb-5 text-4xl font-bold">
                 {event.name}
             </h1>
-            <Countdown event={event.date} />
-            <p className="my-2">{formattedDate}</p>
+            <Countdown event={event} showDate={true} />
             <EventSelect events={events} current={event} />
         </>
     );
