@@ -51,7 +51,7 @@ export default function OrienteeringPage(): ReactElement {
                     )}
                 </p>
             )) || <p>Ich habe keine aktive Saison.</p>}
-            <h2 className="text-primary mt-5 text-2xl font-bold">
+            <h2 className="text-secondary mt-5 text-2xl font-bold">
                 Vergangene Saisons
             </h2>
 

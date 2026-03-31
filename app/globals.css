@@ -1,21 +1,6 @@
 @import 'tailwindcss';
-@plugin 'daisyui';
-
-/*noinspection CssUnknownProperty*/
-@plugin 'daisyui/theme' {
-    name: 'mytheme';
-    default: true;
-    prefersdark: true;
-    color-scheme: dark;
-    --color-primary: #22d3ee;
-    --color-secondary: #c3c3c3;
-    --color-accent: #ffffff;
-    --color-neutral: rgb(8, 47, 73);
-    --color-base-100: rgb(55, 65, 81);
-    --color-info: #cffafe;
-    --color-success: #66da66;
-    --color-warning: #fcd34d;
-    --color-error: #ef4444;
+@plugin 'daisyui' {
+    themes: forest --default;
 }
 
 @theme {
