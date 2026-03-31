@@ -1,12 +1,12 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 export default function DefaultLayout({
     children,
 }: {
-    children: ReactElement;
-}): ReactElement {
+    children: React.ReactNode;
+}): React.ReactNode {
     return (
         <div className="flex min-h-screen flex-col">
             <Navbar />
