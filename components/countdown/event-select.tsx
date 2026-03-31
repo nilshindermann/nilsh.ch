@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { ReactElement } from 'react';
 import { CountdownEvent } from '@/models/events';
+import Link from '@/components/link';
 
 interface Props {
     events: Array<CountdownEvent>;
@@ -13,7 +13,7 @@ export default function EventSelect({
     current,
     basePath,
 }: Props): ReactElement {
-    const path = basePath || '.';
+    const path = basePath || '/';
 
     return (
         <div className="dropdown">

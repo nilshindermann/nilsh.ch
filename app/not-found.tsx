@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import React, { ReactElement } from 'react';
+import Link from '@/components/link';
 
 export const metadata: Metadata = {
     title: '404 - Nils Hindermann',

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { ReactElement } from 'react';
+import Link from '@/components/link';
 
 export const metadata: Metadata = {
     title: 'Geocaching - Nils Hindermann',
@@ -23,11 +23,7 @@ export default function OrienteeringPage(): ReactElement {
             <h2 className="text-secondary mt-5 text-2xl font-bold">
                 Meine Statistiken
             </h2>
-            <Link
-                href="https://project-gc.com/ProfileStats/froggy1407"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <Link href="https://project-gc.com/ProfileStats/froggy1407">
                 <Image
                     alt="Project-GC"
                     src="https://cdn2.project-gc.com/ProfileStatsImage/froggy1407"

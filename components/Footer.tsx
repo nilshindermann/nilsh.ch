@@ -1,6 +1,6 @@
 import SocialMediaLinks from '@/components/SocialMediaLinks';
-import Link from 'next/link';
 import { ReactElement } from 'react';
+import Link from '@/components/link';
 
 const links: { href: string; displayName: string }[] = [
     {
