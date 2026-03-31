@@ -1,6 +1,6 @@
 import SocialMediaLinks from '@/components/SocialMediaLinks';
-import Link from 'next/link';
 import { ReactElement } from 'react';
+import Link from '@/components/link';
 
 const links: { href: string; displayName: string }[] = [
     {
@@ -33,7 +33,7 @@ export default function Footer(): ReactElement {
             </nav>
             <SocialMediaLinks />
             <aside>
-                <p>Copyright &copy; 2025 - Nils Hindermann</p>
+                <p>Copyright &copy; 2026 - Nils Hindermann</p>
             </aside>
         </footer>
     );

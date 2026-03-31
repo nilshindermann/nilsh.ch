@@ -1,8 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { ReactElement } from 'react';
+import Link from '@/components/link';
 
 const links: { href: string; displayName: string }[] = [
     {

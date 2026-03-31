@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { ReactElement } from 'react';
+import Link from '@/components/link';
 
 import logo from '../assets/nilshindermann_logo.svg';
 
@@ -19,11 +19,7 @@ export default function Home(): ReactElement {
 
             <p className="mt-8 text-xl">
                 In meiner Freizeit fotografiere ich gerne. Einige Fotos poste
-                ich auf{' '}
-                <Link href="https://l.nilsh.ch/ig" target="_blank">
-                    Instagram
-                </Link>
-                .
+                ich auf <Link href="https://l.nilsh.ch/ig">Instagram</Link>.
             </p>
         </>
     );

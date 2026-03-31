@@ -49,7 +49,11 @@ export default async function CountdownPage(
                 {event.name}
             </h1>
             <Countdown event={event} showDate={true} />
-            <EventSelect events={events} current={event} />
+            <EventSelect
+                events={events}
+                current={event}
+                basePath="/countdown"
+            />
         </>
     );
 }

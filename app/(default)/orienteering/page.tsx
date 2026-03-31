@@ -1,7 +1,7 @@
 import { seasons } from '@/data/orienteering_seasons';
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { ReactElement } from 'react';
+import Link from '@/components/link';
 
 export const metadata: Metadata = {
     title: 'OL - Nils Hindermann',
@@ -36,7 +36,6 @@ export default function OrienteeringPage(): ReactElement {
                             currentSeason.category,
                             currentSeason.year,
                         )}
-                        target="_blank"
                     >
                         Jahrespunkteliste
                     </Link>{' '}
@@ -52,7 +51,7 @@ export default function OrienteeringPage(): ReactElement {
                     )}
                 </p>
             )) || <p>Ich habe keine aktive Saison.</p>}
-            <h2 className="text-primary mt-5 text-2xl font-bold">
+            <h2 className="text-secondary mt-5 text-2xl font-bold">
                 Vergangene Saisons
             </h2>
 
