@@ -77,14 +77,8 @@ export default function ProjectsPage(): ReactElement {
                         </ul>
                     </li>
                     <li>Azubi Management Tool</li>
-                    <li>
-                        LWZO 2021 (
-                        <Link href="https://l.nilsh.ch/lwzowin" target="_blank">
-                            gewonnen
-                        </Link>
-                        )
-                    </li>
-                    <li>LWZO 2020</li>
+                    <li>LWZO 2021 – Covid Game (Jurypreis gewonnen)</li>
+                    <li>LWZO 2020 – Spielhöhle</li>
                 </ul>
             </div>
         </>
