@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 interface CounterProps {
     count: number;
@@ -8,7 +8,7 @@ interface CounterProps {
     alwaysVisible?: boolean;
 }
 
-export default function Counter(props: CounterProps) {
+export default function Counter(props: CounterProps): ReactNode {
     const {
         count,
         digits,
