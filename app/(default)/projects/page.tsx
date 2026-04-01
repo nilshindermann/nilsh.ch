@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import React, { ReactElement } from 'react';
+import Link from '@/components/link';
 
 export const metadata: Metadata = {
     title: 'Projekte - Nils Hindermann',
@@ -20,10 +20,7 @@ export default function ProjectsPage(): ReactElement {
                 <p className="mt-2">
                     Die meisten meiner Projekte sind privat und nicht
                     öffentlich, jedoch gibt es einige Projekte, die ich auf{' '}
-                    <Link
-                        href="https://github.com/nilshindermann?tab=repositories"
-                        target="_blank"
-                    >
+                    <Link href="https://github.com/nilshindermann?tab=repositories">
                         GitHub
                     </Link>{' '}
                     veröffentlicht habe.
@@ -34,19 +31,13 @@ export default function ProjectsPage(): ReactElement {
                 <ul className="list-outside list-disc pl-5">
                     <li>
                         Diese Webseite (
-                        <Link
-                            href="https://github.com/nilshindermann/nilsh.ch"
-                            target="_blank"
-                        >
+                        <Link href="https://github.com/nilshindermann/nilsh.ch">
                             Sourcecode
                         </Link>
                         )
                     </li>
                     <li>
-                        <Link
-                            href="https://dragdroppy.nilsh.ch"
-                            target="_blank"
-                        >
+                        <Link href="https://dragdroppy.nilsh.ch">
                             Drag Droppy
                         </Link>
                     </li>
@@ -59,18 +50,10 @@ export default function ProjectsPage(): ReactElement {
                         Diverse Projekte für Fachmodule an der TBZ
                         <ul className="list-outside list-disc pl-5">
                             <li>
-                                <Link
-                                    href="https://m152.nilsh.ch"
-                                    target="_blank"
-                                >
-                                    M152
-                                </Link>
+                                <Link href="https://m152.nilsh.ch">M152</Link>
                             </li>
                             <li>
-                                <Link
-                                    href="https://github.com/code-with-nils/Parkgarage-Romer-Hindermann"
-                                    target="_blank"
-                                >
+                                <Link href="https://github.com/code-with-nils/Parkgarage-Romer-Hindermann">
                                     M242
                                 </Link>
                             </li>
