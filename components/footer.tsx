@@ -18,8 +18,10 @@ const links: { href: string; displayName: string }[] = [
 ];
 
 export default function Footer(): ReactElement {
+    const year = new Date().getFullYear();
+
     return (
-        <footer className="footer footer-horizontal footer-center bg-neutral text-neutral-content rounded p-10">
+        <footer className="footer footer-horizontal footer-center bg-base-300 text-base-content rounded p-10">
             <nav className="grid grid-flow-col gap-4">
                 {links.map(({ href, displayName }) => (
                     <Link
@@ -33,7 +35,7 @@ export default function Footer(): ReactElement {
             </nav>
             <SocialMediaLinks />
             <aside>
-                <p>Copyright &copy; 2026 - Nils Hindermann</p>
+                <p>Copyright &copy; {year} - Nils Hindermann</p>
             </aside>
         </footer>
     );
