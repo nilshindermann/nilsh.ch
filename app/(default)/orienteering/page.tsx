@@ -20,9 +20,7 @@ export default function OrienteeringPage(): ReactElement {
 
     return (
         <>
-            <h1 className="text-primary mb-5 text-4xl font-bold">
-                Orientierungslauf
-            </h1>
+            <h1>Orientierungslauf</h1>
             <p>
                 OL ist eines meiner Hobbys. Ich bin Mitglied bei der OLG Stäfa.
             </p>
