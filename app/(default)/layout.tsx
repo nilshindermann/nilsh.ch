@@ -8,13 +8,11 @@ export default function DefaultLayout({
     children: React.ReactNode;
 }): React.ReactNode {
     return (
-        <div className="flex min-h-screen flex-col">
-            <Navbar>
-                <main className="mx-auto w-full p-8 lg:container">
-                    {children}
-                </main>
-            </Navbar>
+        <Navbar>
+            <main className="mx-auto w-full grow p-8 lg:container">
+                {children}
+            </main>
             <Footer />
-        </div>
+        </Navbar>
     );
 }

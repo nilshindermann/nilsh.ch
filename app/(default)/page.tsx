@@ -3,7 +3,7 @@ import Link from '@/components/link';
 
 export default function Home(): ReactElement {
     return (
-        <div className="text-center">
+        <div className="flex h-full flex-col items-center justify-center text-center">
             <h1>Willkommen bei Nils&nbsp;Hindermann</h1>
             <p className="mt-10 text-xl">
                 Hi, ich bin Nils Hindermann 😊

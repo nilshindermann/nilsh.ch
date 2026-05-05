@@ -2,13 +2,13 @@
 
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import React, { ReactElement } from 'react';
+import React from 'react';
 import Link from '@/components/link';
 
 import logo from '@/app/assets/nilshindermann_logo.svg';
 
 interface NavbarProps {
-    children: ReactElement;
+    children: React.ReactNode;
 }
 
 interface NavLink {
@@ -18,6 +18,10 @@ interface NavLink {
 }
 
 const links: NavLink[] = [
+    {
+        href: '/',
+        displayName: 'Startseite',
+    },
     {
         href: '/about',
         displayName: 'Über mich',
@@ -36,10 +40,17 @@ const links: NavLink[] = [
     },
 ];
 
-export default function Navbar(props: NavbarProps): ReactElement {
-    const pathname = usePathname();
+export default function Navbar(props: NavbarProps): React.ReactElement {
+    const pathname: string = usePathname();
 
-    const renderNavLink = (link: NavLink): ReactElement => {
+    const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+    React.useEffect(() => {
+        // Close drawer when route changes
+        setDrawerOpen(false);
+    }, [pathname]);
+
+    const renderNavLink = (link: NavLink): React.ReactElement => {
         return (
             <li key={link.href}>
                 {(link.children && (
@@ -75,8 +86,14 @@ export default function Navbar(props: NavbarProps): ReactElement {
 
     return (
         <div className="drawer flex flex-1 flex-col">
-            <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content flex flex-col">
+            <input
+                id="nav-drawer"
+                type="checkbox"
+                className="drawer-toggle"
+                checked={drawerOpen}
+                onChange={(e) => setDrawerOpen(e.target.checked)}
+            />
+            <div className="drawer-content flex h-dvh flex-col">
                 <nav className="navbar bg-base-300 shadow-sm">
                     <div className="mx-auto flex w-full items-center lg:container">
                         <div className="flex-none lg:hidden">
