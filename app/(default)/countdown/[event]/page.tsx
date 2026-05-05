@@ -6,6 +6,7 @@ import { ReactElement } from 'react';
 
 import { events } from '../events';
 import { CountdownEvent } from '@/models/events';
+import CenterAlignedPage from '@/components/center-aligned-page';
 
 interface Params {
     event: string;
@@ -44,16 +45,14 @@ export default async function CountdownPage(
     }
 
     return (
-        <>
-            <h1 className="text-primary mb-5 text-4xl font-bold">
-                {event.name}
-            </h1>
+        <CenterAlignedPage>
+            <h1>{event.name}</h1>
             <Countdown event={event} showDate={true} />
             <EventSelect
                 events={events}
                 current={event}
                 basePath="/countdown"
             />
-        </>
+        </CenterAlignedPage>
     );
 }
