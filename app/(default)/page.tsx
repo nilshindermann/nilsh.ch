@@ -1,9 +1,10 @@
 import { ReactElement } from 'react';
 import Link from '@/components/link';
+import CenterAlignedPage from '@/components/center-aligned-page';
 
 export default function Home(): ReactElement {
     return (
-        <div className="flex h-full flex-col items-center justify-center text-center">
+        <CenterAlignedPage>
             <h1>Willkommen bei Nils&nbsp;Hindermann</h1>
             <p className="mt-10 text-xl">
                 Hi, ich bin Nils Hindermann 😊
@@ -15,6 +16,6 @@ export default function Home(): ReactElement {
                 In meiner Freizeit fotografiere ich gerne. Einige Fotos poste
                 ich auf <Link href="https://l.nilsh.ch/ig">Instagram</Link>.
             </p>
-        </div>
+        </CenterAlignedPage>
     );
 }
