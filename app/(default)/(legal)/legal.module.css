@@ -2,7 +2,7 @@
 @reference '../../globals.css';
 
 .legal {
-    @apply mx-auto max-w-3xl p-4 text-left;
+    @apply mx-auto max-w-3xl text-left;
 }
 
 .legal a {
@@ -14,7 +14,7 @@
 }
 
 .legal h1 {
-    @apply text-primary mb-5 text-center text-4xl font-bold;
+    @apply text-primary mb-5 text-center text-2xl sm:text-3xl md:text-4xl font-bold;
 }
 
 .legal h2 {

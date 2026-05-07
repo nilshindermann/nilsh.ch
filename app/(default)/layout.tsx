@@ -2,6 +2,8 @@ import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import React from 'react';
 
+import s from './default.module.css';
+
 export default function DefaultLayout({
     children,
 }: {
@@ -9,9 +11,7 @@ export default function DefaultLayout({
 }): React.ReactNode {
     return (
         <Navbar>
-            <main className="mx-auto w-full grow p-8 lg:container">
-                {children}
-            </main>
+            <main className={s.default}>{children}</main>
             <Footer />
         </Navbar>
     );

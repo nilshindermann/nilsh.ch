@@ -49,9 +49,7 @@ export default function OrienteeringPage(): ReactElement {
                     )}
                 </p>
             )) || <p>Ich habe keine aktive Saison.</p>}
-            <h2 className="text-secondary mt-5 text-2xl font-bold">
-                Vergangene Saisons
-            </h2>
+            <h2>Vergangene Saisons</h2>
 
             <div className="max-w-full overflow-x-auto">
                 <table className="table">

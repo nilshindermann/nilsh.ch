@@ -6,7 +6,7 @@ import { ReactElement } from 'react';
 
 import { events } from '../events';
 import { CountdownEvent } from '@/models/events';
-import CenterAlignedPage from '@/components/center-aligned-page';
+import CenterAlignedPage from '@/components/layout/center-aligned-page';
 
 interface Params {
     event: string;

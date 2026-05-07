@@ -22,9 +22,7 @@ export default function OrienteeringPage(): ReactElement {
             </p>
 
             <div className="mt-5 flex flex-col flex-wrap items-center justify-center">
-                <h2 className="text-secondary py-5 text-2xl font-bold">
-                    Meine Statistiken
-                </h2>
+                <h2>Meine Statistiken</h2>
                 <Link href="https://project-gc.com/ProfileStats/froggy1407">
                     <Image
                         alt="Project-GC"

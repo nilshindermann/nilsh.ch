@@ -1,0 +1,23 @@
+@reference 'tailwindcss';
+@reference '../globals.css';
+
+@layer base {
+    .default {
+        @apply mx-auto w-full grow p-8 lg:container;
+    }
+}
+
+@layer components {
+    /* Link styles */
+    .default a:not(.btn) {
+        @apply text-primary underline hover:no-underline;
+    }
+
+    .default h1 {
+        @apply text-primary mb-5 text-2xl sm:text-3xl md:text-4xl font-bold;
+    }
+
+    .default h2 {
+        @apply text-secondary my-5 text-2xl font-bold;
+    }
+}

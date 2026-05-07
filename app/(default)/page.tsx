@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import Link from '@/components/link';
-import CenterAlignedPage from '@/components/center-aligned-page';
+import CenterAlignedPage from '@/components/layout/center-aligned-page';
 
 export default function Home(): ReactElement {
     return (
