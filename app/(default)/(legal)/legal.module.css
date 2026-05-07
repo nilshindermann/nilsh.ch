@@ -14,11 +14,11 @@
 }
 
 .legal h1 {
-    @apply text-primary mb-5 text-center text-2xl sm:text-3xl md:text-4xl font-bold;
+    @apply text-center;
 }
 
 .legal h2 {
-    @apply mb-1 text-2xl font-bold;
+    @apply text-base-content mt-0 mb-1;
 }
 
 .legal h3 {
