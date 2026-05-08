@@ -20,9 +20,7 @@ export default function OrienteeringPage(): ReactElement {
 
     return (
         <>
-            <h1 className="text-primary mb-5 text-4xl font-bold">
-                Orientierungslauf
-            </h1>
+            <h1>Orientierungslauf</h1>
             <p>
                 OL ist eines meiner Hobbys. Ich bin Mitglied bei der OLG Stäfa.
             </p>
@@ -51,9 +49,7 @@ export default function OrienteeringPage(): ReactElement {
                     )}
                 </p>
             )) || <p>Ich habe keine aktive Saison.</p>}
-            <h2 className="text-secondary mt-5 text-2xl font-bold">
-                Vergangene Saisons
-            </h2>
+            <h2>Vergangene Saisons</h2>
 
             <div className="max-w-full overflow-x-auto">
                 <table className="table">

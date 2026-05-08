@@ -1,6 +1,7 @@
 import Countdown from '@/components/countdown/countdown';
 import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
+import CenterAlignedPage from '@/components/layout/center-aligned-page';
 
 export const metadata: Metadata = {
     title: 'Über mich - Nils Hindermann',
@@ -10,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage(): ReactElement {
     return (
-        <>
-            <h1 className="text-primary mb-5 text-4xl font-bold">Über mich</h1>
+        <CenterAlignedPage>
+            <h1>Über mich</h1>
             <p className="mb-1">
                 Ich bin ein junger Softwareentwickler aus Zürich.
             </p>
@@ -26,6 +27,6 @@ export default function AboutPage(): ReactElement {
                     duration: 'P1D',
                 }}
             />
-        </>
+        </CenterAlignedPage>
     );
 }
