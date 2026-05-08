@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage(): ReactElement {
     return (
         <>
-            <h1 className="text-primary mb-5 text-4xl font-bold">Projekte</h1>
+            <h1>Projekte</h1>
             <div className="max-w-3xl text-left">
                 <p>
                     Hier findest du eine Übersicht aller Projekte, an denen ich

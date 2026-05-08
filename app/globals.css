@@ -30,10 +30,3 @@
         border-color: var(--color-gray-200, currentcolor);
     }
 }
-
-@layer components {
-    /* Link styles */
-    a:not(.btn) {
-        @apply text-primary underline hover:no-underline;
-    }
-}
