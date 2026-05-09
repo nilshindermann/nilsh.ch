@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
 import Link from '@/components/link';
+import { Project, projects } from '@/data/projects';
 
 export const metadata: Metadata = {
     title: 'Projekte - Nils Hindermann',
@@ -9,60 +10,67 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage(): ReactElement {
+    const activeProjects: Project[] = projects.filter((p) => p.isActive);
+    const inactiveProjects: Project[] = projects.filter((p) => !p.isActive);
+
+    const renderProjects = (projects: Project[]): ReactElement => {
+        return (
+            <div className="overflow-x-auto">
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th className="text-right">Links</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {projects.map((p) => (
+                            <tr key={p.name}>
+                                <td>{p.name}</td>
+                                <td className="text-right">
+                                    {p.links &&
+                                        p.links.map((l) => (
+                                            <Link
+                                                href={l.href}
+                                                key={l.href}
+                                                className="pl-2"
+                                            >
+                                                {l.label}
+                                            </Link>
+                                        ))}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        );
+    };
+
     return (
         <>
             <h1>Projekte</h1>
-            <div className="max-w-3xl text-left">
-                <p>
-                    Hier findest du eine Übersicht aller Projekte, an denen ich
-                    so mitgewirkt habe.
-                </p>
-                <p className="mt-2">
-                    Die meisten meiner Projekte sind privat und nicht
-                    öffentlich, jedoch gibt es einige Projekte, die ich auf{' '}
-                    <Link href="https://github.com/nilshindermann?tab=repositories">
-                        GitHub
-                    </Link>{' '}
-                    veröffentlicht habe.
-                </p>
-                <h2 className="text-secondary mt-5 text-xl font-bold">
-                    Aktuelle Projekte
-                </h2>
-                <ul className="list-outside list-disc pl-5">
-                    <li>
-                        Diese Webseite (
-                        <Link href="https://github.com/nilshindermann/nilsh.ch">
-                            Sourcecode
-                        </Link>
-                        )
-                    </li>
-                    <li>
-                        <Link href="https://dragdroppy.nilsh.ch">
-                            Drag Droppy
-                        </Link>
-                    </li>
-                </ul>
-                <h2 className="text-secondary mt-5 text-xl font-bold">
-                    Vergangene Projekte
-                </h2>
-                <ul className="list-outside list-disc pl-5">
-                    <li>
-                        Diverse Projekte für Fachmodule an der TBZ
-                        <ul className="list-outside list-disc pl-5">
-                            <li>
-                                <Link href="https://m152.nilsh.ch">M152</Link>
-                            </li>
-                            <li>
-                                <Link href="https://github.com/code-with-nils/Parkgarage-Romer-Hindermann">
-                                    M242
-                                </Link>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Azubi Management Tool</li>
-                    <li>LWZO 2021 – Covid Game (Jurypreis gewonnen)</li>
-                    <li>LWZO 2020 – Spielhöhle</li>
-                </ul>
+            <p>
+                Hier findest du eine Übersicht aller Projekte, an denen ich so
+                mitgewirkt habe.
+            </p>
+            <p className="mt-2">
+                Die meisten meiner Projekte sind privat und nicht öffentlich,
+                jedoch gibt es einige Projekte, die ich auf{' '}
+                <Link href="https://github.com/nilshindermann?tab=repositories">
+                    GitHub
+                </Link>{' '}
+                veröffentlicht habe.
+            </p>
+            <div className="flex w-full flex-col lg:flex-row">
+                <div className="grow lg:mr-2">
+                    <h2>Aktuelle Projekte</h2>
+                    {renderProjects(activeProjects)}
+                </div>
+                <div className="grow lg:ml-2">
+                    <h2>Vergangene Projekte</h2>
+                    {renderProjects(inactiveProjects)}
+                </div>
             </div>
         </>
     );
