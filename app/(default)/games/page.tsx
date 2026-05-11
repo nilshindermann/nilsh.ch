@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import React, { ReactElement } from 'react';
+import Link from '@/components/link';
 
 interface Game {
     slug: string;
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function GamesPage(): ReactElement {
     return (
-        <div className="text-left">
+        <>
             <h1 className="text-primary mb-5 text-4xl font-bold">Games</h1>
             <p>
                 Hier findest du einige Spiele, die ich entwickelt habe. Unter
@@ -59,6 +59,6 @@ export default function GamesPage(): ReactElement {
                     </li>
                 ))}
             </ul>
-        </div>
+        </>
     );
 }

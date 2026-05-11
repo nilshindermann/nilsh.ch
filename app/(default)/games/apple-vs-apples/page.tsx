@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import React, { ReactElement } from 'react';
+import Link from '@/components/link';
 
 export const metadata: Metadata = {
     title: 'Apple vs. Apples - Nils Hindermann',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function AppleVsApplesPage(): ReactElement {
     return (
         <>
-            <h1 className="mb-5 text-4xl font-bold text-primary">
+            <h1 className="text-primary mb-5 text-4xl font-bold">
                 Apple vs. Apples
             </h1>
             <p>
@@ -27,11 +27,7 @@ export default function AppleVsApplesPage(): ReactElement {
             </p>
             <p>
                 Bis diese Seite noch nicht fertig ist, kannst du das Spiel auf{' '}
-                <Link
-                    href="https://applevsapples.nilsh.ch"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <Link href="https://applevsapples.nilsh.ch">
                     applevsapples.nilsh.ch
                 </Link>{' '}
                 herunterladen.
