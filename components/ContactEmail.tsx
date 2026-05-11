@@ -15,8 +15,8 @@ export default function ContactEmail({
     useEffect(() => {
         const realEmail = email;
         const timeoutId = setTimeout(() => setDisplayEmail(realEmail), 1000);
-        return () => clearTimeout(timeoutId);
-    }, []);
+        return (): void => clearTimeout(timeoutId);
+    }, [email]);
 
     return <NoSSR className="text-inherit">{displayEmail}</NoSSR>;
 }

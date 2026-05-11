@@ -54,7 +54,7 @@ export default function Countdown({
 
     useEffect(() => {
         const interval = setInterval(() => setTime(calcTime), 1000);
-        return () => clearInterval(interval);
+        return (): void => clearInterval(interval);
     }, [calcTime]);
 
     return (

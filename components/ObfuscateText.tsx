@@ -16,8 +16,8 @@ export default function ObfuscateText({
     useEffect(() => {
         const realText = children;
         const timeoutId = setTimeout(() => setText(realText), 1000);
-        return () => clearTimeout(timeoutId);
-    }, []);
+        return (): void => clearTimeout(timeoutId);
+    }, [children]);
 
     return <NoSSR {...props}>{text}</NoSSR>;
 }

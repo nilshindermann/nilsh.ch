@@ -1,19 +1,18 @@
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
-import React, { ReactElement } from 'react';
+import Footer from '@/components/footer';
+import Navbar from '@/components/navbar';
+import React from 'react';
+
+import s from './default.module.css';
 
 export default function DefaultLayout({
     children,
 }: {
-    children: ReactElement;
-}): ReactElement {
+    children: React.ReactNode;
+}): React.ReactNode {
     return (
-        <div className="flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex flex-1 flex-col items-center justify-center p-8 text-center">
-                {children}
-            </main>
+        <Navbar>
+            <main className={s.default}>{children}</main>
             <Footer />
-        </div>
+        </Navbar>
     );
 }

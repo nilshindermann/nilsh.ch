@@ -1,7 +1,7 @@
 import { seasons } from '@/data/orienteering_seasons';
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { ReactElement } from 'react';
+import Link from '@/components/link';
 
 export const metadata: Metadata = {
     title: 'OL - Nils Hindermann',
@@ -20,9 +20,7 @@ export default function OrienteeringPage(): ReactElement {
 
     return (
         <>
-            <h1 className="text-primary mb-5 text-4xl font-bold">
-                Orientierungslauf
-            </h1>
+            <h1>Orientierungslauf</h1>
             <p>
                 OL ist eines meiner Hobbys. Ich bin Mitglied bei der OLG Stäfa.
             </p>
@@ -36,7 +34,6 @@ export default function OrienteeringPage(): ReactElement {
                             currentSeason.category,
                             currentSeason.year,
                         )}
-                        target="_blank"
                     >
                         Jahrespunkteliste
                     </Link>{' '}
@@ -52,9 +49,7 @@ export default function OrienteeringPage(): ReactElement {
                     )}
                 </p>
             )) || <p>Ich habe keine aktive Saison.</p>}
-            <h2 className="text-primary mt-5 text-2xl font-bold">
-                Vergangene Saisons
-            </h2>
+            <h2>Vergangene Saisons</h2>
 
             <div className="max-w-full overflow-x-auto">
                 <table className="table">

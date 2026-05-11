@@ -12,12 +12,10 @@ export default function ContactPage(): ReactElement {
     return (
         <>
             <h1>Kontakt</h1>
-            <div className="text-center">
-                <p>Kontaktiere mich über E-Mail.</p>
-                <p className="mt-2 text-xl">
-                    <ContactEmail email="hello@nilsh.ch" />
-                </p>
-            </div>
+            <p>Kontaktiere mich über E-Mail.</p>
+            <p className="mt-2 text-xl">
+                <ContactEmail email="hello@nilsh.ch" />
+            </p>
         </>
     );
 }

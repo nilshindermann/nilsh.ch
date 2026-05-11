@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 export const metadata: Metadata = {
     title: 'Special Page',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function SpecialLayout({
     children,
 }: {
-    children: ReactElement;
-}): ReactElement {
+    children: React.ReactNode;
+}): React.ReactNode {
     return <>{children}</>;
 }
