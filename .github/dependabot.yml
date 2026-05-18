@@ -1,7 +1,7 @@
 version: 2
 
 updates:
-  # One grouped PR per week for vulnerability fixes.
+  # Major bumps are excluded - those deserve a deliberate manual update.
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -10,31 +10,12 @@ updates:
       time: "06:00"
       timezone: "Europe/Zurich"
     open-pull-requests-limit: 5
-    rebase-strategy: "auto"     # Force-pushes new commits onto the open PR
+    rebase-strategy: "auto"
     groups:
       security-updates:
         applies-to: security-updates
         patterns:
           - "*"
-    labels:
-      - "dependencies"
-      - "security"
-    commit-message:
-      prefix: "fix(deps)"
-      include: "scope"
-
-  # One grouped PR, updated weekly.
-  # Major bumps are excluded — those deserve a deliberate manual update.
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:00"
-      timezone: "Europe/Zurich"
-    open-pull-requests-limit: 1
-    rebase-strategy: "auto"
-    groups:
       minor-and-patch:
         applies-to: version-updates
         update-types:
@@ -61,6 +42,7 @@ updates:
       time: "06:00"
       timezone: "Europe/Zurich"
     open-pull-requests-limit: 1
+    rebase-strategy: "auto"
     groups:
       github-actions:
         patterns:
