@@ -33,7 +33,7 @@
         "@typescript-eslint/parser": "^8",
         "autoprefixer": "^10",
         "daisyui": "^5",
-        "esbuild": "^0.27",
+        "esbuild": "^0.28",
         "eslint": "^9",
         "eslint-config-next": "^15",
         "eslint-config-prettier": "^10",
