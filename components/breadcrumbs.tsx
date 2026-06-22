@@ -31,6 +31,10 @@ export default function Breadcrumbs(): React.ReactNode {
 
     const segments = pathname.split('/').filter(Boolean);
 
+    function capitalizeFirstLetter(string: string): string {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     return (
         <div className="breadcrumbs text-accent my-2 text-sm">
             <ul>
@@ -45,13 +49,15 @@ export default function Breadcrumbs(): React.ReactNode {
                     return (
                         <li key={href}>
                             {isLast ? (
-                                (mappings[segment] ?? segment)
+                                (mappings[segment] ??
+                                capitalizeFirstLetter(segment))
                             ) : (
                                 <Link
                                     href={href}
                                     className="link-accent no-underline"
                                 >
-                                    {mappings[segment] ?? segment}
+                                    {mappings[segment] ??
+                                        capitalizeFirstLetter(segment)}
                                 </Link>
                             )}
                         </li>
