@@ -3,14 +3,7 @@
 import React from 'react';
 import Link from '@/components/link';
 import { usePathname } from 'next/navigation';
-
-const mappings: { [key: string]: string } = {
-    games: 'Games',
-    'apple-vs-apples': 'Apple vs. Apples',
-    'catch-me-if-you-can': 'Catch Me If You Can',
-    'covid-game': 'Covid Game',
-    'drag-droppy': 'Drag Droppy',
-};
+import { mappings } from '@/data/breadcrumb_slugs';
 
 function HomeIcon(): React.ReactNode {
     return (

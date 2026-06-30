@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
 import Link from '@/components/link';
+import { Version, versions } from '@/data/applevsapples/versions';
 
 export const metadata: Metadata = {
     title: 'Downloads - Apple vs. Apples - Nils Hindermann',
@@ -10,16 +11,10 @@ export const metadata: Metadata = {
     Einige Versionen sind noch vorhanden.`,
 };
 
-interface Version {
-    name: string;
-    url: string;
-}
-
 export default function AppleVsApplesDownloadsPage(): ReactElement {
-    const latestVersion: Version = {
-        name: 'Alpha 0.1 Dev Build 4',
-        url: 'https://github.com/nilshindermann/AppleVsApples/releases/download/Alpha-0.1-4/Apple.vs.Apples.0.1-4-Alpha.jar',
-    };
+    const latestVersion: Version = versions.toSorted(
+        (a, b) => b.date.getTime() - a.date.getTime(),
+    )[0];
 
     return (
         <>
@@ -35,7 +30,7 @@ export default function AppleVsApplesDownloadsPage(): ReactElement {
                 Die neuste Version ist: <b>{latestVersion.name}</b>
             </p>
             <p className="mb-2">
-                Du kannst sie <Link href={latestVersion.url}>hier</Link>{' '}
+                Du kannst sie <Link href={latestVersion.download}>hier</Link>{' '}
                 herunterladen.
             </p>
             <div className="divider" />
