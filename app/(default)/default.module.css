@@ -3,18 +3,22 @@
 
 @layer base {
     .default {
-        @apply mx-auto w-full grow p-8 lg:container;
+        @apply mx-auto w-full grow p-8 pt-0 lg:container;
     }
 }
 
 @layer components {
     /* Link styles */
-    .default a:not(.btn) {
-        @apply text-primary underline hover:no-underline;
+    .default a:not(:global(.btn)):not(:global(.tab)) {
+        @apply link-primary underline hover:no-underline;
+    }
+
+    .default a:global(.tab) {
+        @apply no-underline;
     }
 
     .default h1 {
-        @apply text-primary mb-5 text-2xl font-bold sm:text-3xl md:text-4xl;
+        @apply text-primary my-5 text-2xl font-bold sm:text-3xl md:text-4xl;
     }
 
     .default h2 {
