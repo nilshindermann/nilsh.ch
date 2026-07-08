@@ -9,8 +9,12 @@
 
 @layer components {
     /* Link styles */
-    .default a:not(.btn) {
+    .default a:not(:global(.btn)):not(:global(.tab)) {
         @apply link-primary underline hover:no-underline;
+    }
+
+    .default a:global(.tab) {
+        @apply no-underline;
     }
 
     .default h1 {
