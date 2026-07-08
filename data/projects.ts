@@ -41,6 +41,16 @@ export const projects: Array<Project> = [
         ],
     },
     {
+        name: 'Alle Spiele von mir',
+        isActive: true,
+        links: [
+            {
+                href: '/games',
+                label: 'Zur Seite',
+            },
+        ],
+    },
+    {
         name: 'Diverse Projekte für Fachmodule an der TBZ',
         isActive: false,
         links: [
