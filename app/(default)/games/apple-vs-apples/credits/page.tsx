@@ -9,10 +9,32 @@ export const metadata: Metadata = {
     Einige Versionen sind noch vorhanden.`,
 };
 
+interface Credit {
+    name: string;
+    role: string;
+}
+
+const credits: Array<Credit> = [
+    { name: 'Nils Hindermann', role: 'Entwicklung' },
+    { name: 'El. Sp.', role: 'Ideen' },
+    { name: 'Lo. Le.', role: 'Ideen' },
+];
+
 export default function AppleVsApplesCreditsPage(): ReactElement {
     return (
         <>
             <h2>Credits</h2>
+            <p className="mb-2">
+                Diese Leute haben zu diesem Spiel beigetragen:
+            </p>
+            <ul className="list">
+                {credits.map((credit) => (
+                    <li key={credit.name} className="list-row">
+                        <div className="list-col-grow">{credit.name}</div>
+                        <div>{credit.role}</div>
+                    </li>
+                ))}
+            </ul>
         </>
     );
 }
