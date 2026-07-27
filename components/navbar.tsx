@@ -45,10 +45,12 @@ export default function Navbar(props: NavbarProps): React.ReactElement {
 
     const [drawerOpen, setDrawerOpen] = React.useState(false);
 
-    React.useEffect(() => {
+    const [prevPathname, setPrevPathname] = React.useState(pathname);
+    if (pathname !== prevPathname) {
         // Close drawer when route changes
+        setPrevPathname(pathname);
         setDrawerOpen(false);
-    }, [pathname]);
+    }
 
     const renderNavLink = (link: NavLink): React.ReactElement => {
         return (

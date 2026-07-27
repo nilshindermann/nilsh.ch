@@ -21,3 +21,6 @@ next-env.d.ts
 
 # config
 *.config*
+
+# package manager
+pnpm-lock.yaml
