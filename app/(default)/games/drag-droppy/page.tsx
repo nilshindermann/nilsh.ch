@@ -11,9 +11,7 @@ export const metadata: Metadata = {
 export default function DragDroppyPage(): ReactElement {
     return (
         <>
-            <h1 className="text-primary mb-5 text-4xl font-bold">
-                Drag Droppy
-            </h1>
+            <h2>Über das Spiel</h2>
             <p>
                 Wenn du Drag Droppy spielen willst, besuche die Seite{' '}
                 <Link href="https://dragdroppy.nilsh.ch/">Drag Droppy</Link>

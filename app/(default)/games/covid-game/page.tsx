@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function CovidGamePage(): ReactElement {
     return (
         <>
-            <h1 className="text-primary mb-5 text-4xl font-bold">Covid Game</h1>
+            <h2>Über das Spiel</h2>
             <p>
                 Das <b>Covid Game</b> ist ein Spiel, das ich während der
                 Corona-Pandemie entwickelt habe. Es handelt sich um ein
