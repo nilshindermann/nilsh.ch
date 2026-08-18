@@ -1,6 +1,8 @@
 import React from 'react';
 import GameTabs from '@/components/game-tabs';
 
+const gameName = 'Apple vs. Apples';
+
 export default function AppleVsApplesLayout({
     children,
 }: {
@@ -8,7 +10,7 @@ export default function AppleVsApplesLayout({
 }): React.ReactNode {
     return (
         <GameTabs
-            title="Apple vs. Apples"
+            title={gameName}
             tabs={[
                 { href: '/games/apple-vs-apples', label: 'Beschreibung' },
                 {

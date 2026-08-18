@@ -32,7 +32,7 @@ const games: Array<Game> = [
 ];
 
 export const metadata: Metadata = {
-    title: 'Games - Nils Hindermann',
+    title: 'Games',
     description:
         'Einige Spiele, die ich entwickelt habe. Unter anderem das Covid Game und Drag Droppy.',
 };

@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import CreditsList, { Credit } from '@/components/credits-list';
 
 export const metadata: Metadata = {
-    title: 'Credits - Drag Droppy - Nils Hindermann',
+    title: 'Credits - Drag Droppy',
     description:
         'Bei Drag Droppy geht es darum, ein Bild richtig zusammenzusetzen mittels Drag and Drop.',
 };

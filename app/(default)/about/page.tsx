@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 import CenterAlignedPage from '@/components/layout/center-aligned-page';
 
 export const metadata: Metadata = {
-    title: 'Über mich - Nils Hindermann',
+    title: 'Über mich',
     description:
         'Nils Hindermann ist ein Schweizer Softwareentwickler aus Zürich.',
 };

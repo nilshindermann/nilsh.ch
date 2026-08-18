@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-    title: 'Catch Me If You Can - Nils Hindermann',
+    title: 'Catch Me If You Can',
     description: `Catch Me If You Can ist ein Spiel, das ich während der Corona-Pandemie entwickelt habe.
     Damit habe ich am Lehrlingswettbewerb Züri-Oberland 2020 teilgenommen.`,
 };

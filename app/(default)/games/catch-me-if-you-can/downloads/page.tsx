@@ -3,14 +3,12 @@ import React, { ReactElement } from 'react';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-    title: 'Catch Me If You Can - Nils Hindermann',
-    description: `Apple vs. Apples ist ein Spiel, das ich in Java entwickelt habe.
-    Die ersten Ansätze habe ich im Alter von 10 Jahren gemacht.
-    Das Spiel wurde mehrmals von Grund auf neu entwickelt.
-    Einige Versionen sind noch vorhanden.`,
+    title: 'Downloads - Catch Me If You Can',
+    description: `Catch Me If You Can ist ein Spiel, das ich während der Corona-Pandemie entwickelt habe.
+    Damit habe ich am Lehrlingswettbewerb Züri-Oberland 2020 teilgenommen.`,
 };
 
-export default function AppleVsApplesPage(): ReactElement {
+export default function CatchMeIfYouCanDownloadsPage(): ReactElement {
     return (
         <>
             <h2>Downloads</h2>

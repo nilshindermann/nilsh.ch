@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import Link from '@/components/link';
 
 export const metadata: Metadata = {
-    title: 'Drag Droppy - Nils Hindermann',
+    title: 'Drag Droppy',
     description:
         'Bei Drag Droppy geht es darum, ein Bild richtig zusammenzusetzen mittels Drag and Drop.',
 };

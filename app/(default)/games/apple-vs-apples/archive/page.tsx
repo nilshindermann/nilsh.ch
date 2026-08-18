@@ -4,7 +4,7 @@ import { versions } from '@/data/applevsapples/versions';
 import Link from '@/components/link';
 
 export const metadata: Metadata = {
-    title: 'Archiv - Apple vs. Apples - Nils Hindermann',
+    title: 'Archiv - Apple vs. Apples',
     description: `Apple vs. Apples ist ein Spiel, das ich in Java entwickelt habe.
     Die ersten Ansätze habe ich im Alter von 10 Jahren gemacht.
     Das Spiel wurde mehrmals von Grund auf neu entwickelt.

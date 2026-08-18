@@ -7,7 +7,10 @@ import React from 'react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'nilsh.ch - Nils Hindermann',
+    title: {
+        template: '%s - Nils Hindermann',
+        default: 'nilsh.ch - Nils Hindermann',
+    },
     description:
         'Nils Hindermann ist ein Schweizer Softwareentwickler aus Zürich.',
 };

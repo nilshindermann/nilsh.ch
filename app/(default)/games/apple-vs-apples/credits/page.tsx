@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import CreditsList, { Credit } from '@/components/credits-list';
 
 export const metadata: Metadata = {
-    title: 'Credits - Apple vs. Apples - Nils Hindermann',
+    title: 'Credits - Apple vs. Apples',
     description: `Apple vs. Apples ist ein Spiel, das ich in Java entwickelt habe.
     Die ersten Ansätze habe ich im Alter von 10 Jahren gemacht.
     Das Spiel wurde mehrmals von Grund auf neu entwickelt.

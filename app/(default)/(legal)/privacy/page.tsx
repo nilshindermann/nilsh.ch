@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 import Link from '@/components/link';
 
 export const metadata: Metadata = {
-    title: 'Datenschutzerklärung - Nils Hindermann',
+    title: 'Datenschutzerklärung',
     description:
         'Hier befindet sich die Datenschutzerklärung von Nils Hindermann.',
 };

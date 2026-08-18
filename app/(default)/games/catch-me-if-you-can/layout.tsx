@@ -1,6 +1,8 @@
 import React from 'react';
 import GameTabs from '@/components/game-tabs';
 
+const gameName = 'Catch Me If You Can';
+
 export default function CatchMeIfYouCanPageLayout({
     children,
 }: {
@@ -8,7 +10,7 @@ export default function CatchMeIfYouCanPageLayout({
 }): React.ReactNode {
     return (
         <GameTabs
-            title="Catch Me If You Can"
+            title={gameName}
             tabs={[
                 { href: '/games/catch-me-if-you-can', label: 'Über das Spiel' },
                 {
