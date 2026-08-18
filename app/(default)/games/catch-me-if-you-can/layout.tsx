@@ -4,7 +4,7 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 import Link from '@/components/link';
 
-export default function AppleVsApplesLayout({
+export default function CatchMeIfYouCanPageLayout({
     children,
 }: {
     children: React.ReactNode;
@@ -23,12 +23,11 @@ export default function AppleVsApplesLayout({
 
     return (
         <>
-            <h1>Apple vs. Apples</h1>
+            <h1>Catch Me If You Can</h1>
             <div role="tablist" className="tabs tabs-box justify-center">
-                {tab('/games/apple-vs-apples', 'Beschreibung')}
-                {tab('/games/apple-vs-apples/downloads', 'Downloads')}
-                {tab('/games/apple-vs-apples/archive', 'Archiv')}
-                {tab('/games/apple-vs-apples/credits', 'Credits')}
+                {tab('/games/catch-me-if-you-can', 'Über das Spiel')}
+                {tab('/games/catch-me-if-you-can/downloads', 'Downloads')}
+                {tab('/games/catch-me-if-you-can/credits', 'Credits')}
             </div>
             <div className="mt-5">{children}</div>
         </>
