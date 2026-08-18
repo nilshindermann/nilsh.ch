@@ -30,7 +30,7 @@ updates:
     labels:
       - "dependencies"
     commit-message:
-      prefix: "chore(deps)"
+      prefix: "chore"
       include: "scope"
 
   # One grouped PR per month for all action version bumps.
@@ -51,5 +51,5 @@ updates:
       - "dependencies"
       - "github-actions"
     commit-message:
-      prefix: "ci(deps)"
+      prefix: "ci"
       include: "scope"
