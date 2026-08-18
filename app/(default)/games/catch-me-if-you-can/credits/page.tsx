@@ -1,18 +1,12 @@
 import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
+import CreditsList, { Credit } from '@/components/credits-list';
 
 export const metadata: Metadata = {
-    title: 'Catch Me If You Can - Nils Hindermann',
-    description: `Apple vs. Apples ist ein Spiel, das ich in Java entwickelt habe.
-    Die ersten Ansätze habe ich im Alter von 10 Jahren gemacht.
-    Das Spiel wurde mehrmals von Grund auf neu entwickelt.
-    Einige Versionen sind noch vorhanden.`,
+    title: 'Credits - Catch Me If You Can - Nils Hindermann',
+    description: `Catch Me If You Can ist ein Spiel, das ich während der Corona-Pandemie entwickelt habe.
+    Damit habe ich am Lehrlingswettbewerb Züri-Oberland 2020 teilgenommen.`,
 };
-
-interface Credit {
-    name: string;
-    role: string;
-}
 
 const credits: Array<Credit> = [
     { name: 'Nils Hindermann', role: 'Entwicklung' },
@@ -24,20 +18,5 @@ const credits: Array<Credit> = [
 ];
 
 export default function CatchMeIfYouCanCreditsPage(): ReactElement {
-    return (
-        <>
-            <h2>Credits</h2>
-            <p className="mb-2">
-                Diese Parteien haben zu diesem Spiel beigetragen:
-            </p>
-            <ul className="list">
-                {credits.map((credit) => (
-                    <li key={credit.name} className="list-row">
-                        <div className="list-col-grow">{credit.name}</div>
-                        <div>{credit.role}</div>
-                    </li>
-                ))}
-            </ul>
-        </>
-    );
+    return <CreditsList credits={credits} />;
 }
