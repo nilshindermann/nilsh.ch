@@ -18,6 +18,15 @@ export default function DragDroppyPage(): ReactElement {
                 er noch im Ausbildungszentrum war.
             </p>
             <p className="mb-2">
+                Im Spiel geht es darum, ein zerstückeltes Bild wieder
+                zusammenzusetzen. Standardmässig wird es in 3x3 Stücke zerteilt,
+                das kann aber bis zu 9x9 eingestellt werden. Mit &#34;Random
+                Image&#34; wird ein zufälliges vordefiniertes Bild ausgewählt,
+                aber mit &#34;Custom Image&#34; können eigene Bilder
+                zusammengesetzt werden, diese werden auch nicht auf einem Server
+                gespeichert.
+            </p>
+            <p className="mb-2">
                 Wenn du Drag Droppy spielen willst, besuche die Seite{' '}
                 <Link href="https://dragdroppy.nilsh.ch/">Drag Droppy</Link>
             </p>
