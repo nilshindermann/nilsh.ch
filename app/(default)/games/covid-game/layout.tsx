@@ -13,6 +13,7 @@ export default function CovidGameLayout({
             title={gameName}
             tabs={[
                 { href: '/games/covid-game', label: 'Über das Spiel' },
+                { href: '/games/covid-game/downloads', label: 'Downloads' },
                 { href: '/games/covid-game/credits', label: 'Credits' },
             ]}
         >

@@ -12,7 +12,7 @@ export default function AppleVsApplesLayout({
         <GameTabs
             title={gameName}
             tabs={[
-                { href: '/games/apple-vs-apples', label: 'Beschreibung' },
+                { href: '/games/apple-vs-apples', label: 'Über das Spiel' },
                 {
                     href: '/games/apple-vs-apples/downloads',
                     label: 'Downloads',
