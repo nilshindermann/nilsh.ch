@@ -1,38 +1,18 @@
 import { MetadataRoute } from 'next';
+import { join } from 'path';
+
+import { events } from '@/app/(default)/countdown/events';
+import { getStaticRoutes } from '@/lib/routes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl: string =
-        process.env.BASE_URL ??
-        process.env.CF_PAGES_URL ??
-        'https://www.nilsh.ch';
+    const baseUrl: string = process.env.BASE_URL ?? 'https://www.nilsh.ch';
 
-    return [
-        {
-            url: baseUrl,
-        },
-        {
-            url: baseUrl + '/about',
-        },
-        {
-            url: baseUrl + '/contact',
-        },
-        {
-            url: baseUrl + '/orienteering',
-        },
-        {
-            url: baseUrl + '/geocaching',
-        },
-        {
-            url: baseUrl + '/projects',
-        },
-        {
-            url: baseUrl + '/countdown',
-        },
-        {
-            url: baseUrl + '/imprint',
-        },
-        {
-            url: baseUrl + '/privacy',
-        },
-    ];
+    const staticRoutes = getStaticRoutes(
+        join(process.cwd(), 'app', '(default)'),
+    );
+    const countdownRoutes = events.map((event) => `/countdown/${event.slug}`);
+
+    return [...staticRoutes, ...countdownRoutes].map((route) => ({
+        url: route === '/' ? baseUrl : baseUrl + route,
+    }));
 }
