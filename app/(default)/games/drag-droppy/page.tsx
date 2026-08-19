@@ -12,10 +12,20 @@ export default function DragDroppyPage(): ReactElement {
     return (
         <>
             <h2>Über das Spiel</h2>
-            <p>
+            <p className="mb-2">
+                Drag Droppy ist ein Browser-Spiel, das mit JavaScript
+                programmiert wurde. Die Idee kam Nils im zweiten Lehrjahr, als
+                er noch im Ausbildungszentrum war.
+            </p>
+            <p className="mb-2">
                 Wenn du Drag Droppy spielen willst, besuche die Seite{' '}
                 <Link href="https://dragdroppy.nilsh.ch/">Drag Droppy</Link>
             </p>
+            <iframe
+                title="Spiele Drag Droppy"
+                src="https://dragdroppy.nilsh.ch"
+                className="border-secondary aspect-square w-full rounded-2xl border-2 lg:aspect-video"
+            />
         </>
     );
 }

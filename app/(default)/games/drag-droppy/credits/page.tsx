@@ -10,6 +10,10 @@ export const metadata: Metadata = {
 
 const credits: Array<Credit> = [
     { name: 'Nils Hindermann', role: 'Entwicklung' },
+    {
+        name: 'azo ausbildungszentrum zürcher oberland',
+        role: 'Hardware, Ausbildung, Support',
+    },
 ];
 
 export default function DragDroppyCreditsPage(): ReactElement {
