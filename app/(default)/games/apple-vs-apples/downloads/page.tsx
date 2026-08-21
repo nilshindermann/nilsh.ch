@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default function AppleVsApplesDownloadsPage(): ReactElement {
-    const latestVersion: Version = versions.toSorted(
-        (a, b) => b.date.getTime() - a.date.getTime(),
-    )[0];
+    const latestVersion: Version = versions
+        .slice()
+        .sort((a, b) => b.date.getTime() - a.date.getTime())[0];
 
     return (
         <>

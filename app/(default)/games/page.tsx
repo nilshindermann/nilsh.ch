@@ -49,7 +49,7 @@ export default function GamesPage(): ReactElement {
             <ul className="list">
                 {games.map((game: Game) => (
                     <li className="list-row" key={game.slug}>
-                        <div className="w-13 text-xl">{game.info}</div>
+                        <div className="w-[3.25rem] text-xl">{game.info}</div>
                         <Link
                             className="text-neutral-content list-col-grow text-left text-xl"
                             href={`/games/${game.slug}`}

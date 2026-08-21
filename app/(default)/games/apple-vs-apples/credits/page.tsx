@@ -17,5 +17,10 @@ const credits: Array<Credit> = [
 ];
 
 export default function AppleVsApplesCreditsPage(): ReactElement {
-    return <CreditsList credits={credits} />;
+    return (
+        <CreditsList
+            credits={credits}
+            intro="Diese Leute haben zu diesem Spiel beigetragen:"
+        />
+    );
 }

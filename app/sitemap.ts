@@ -4,6 +4,8 @@ import { join } from 'path';
 import { events } from '@/app/(default)/countdown/events';
 import { getStaticRoutes } from '@/lib/routes';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl: string = process.env.BASE_URL ?? 'https://www.nilsh.ch';
 

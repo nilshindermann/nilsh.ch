@@ -33,6 +33,8 @@ export default function DragDroppyPage(): ReactElement {
             <iframe
                 title="Spiele Drag Droppy"
                 src="https://dragdroppy.nilsh.ch"
+                sandbox="allow-scripts allow-same-origin"
+                loading="lazy"
                 className="border-secondary aspect-square w-full rounded-2xl border-2 lg:aspect-video"
             />
         </>

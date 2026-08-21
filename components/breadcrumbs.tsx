@@ -29,7 +29,11 @@ export default function Breadcrumbs(): React.ReactNode {
     }
 
     return (
-        <div className="breadcrumbs text-accent my-2 text-sm">
+        <div
+            className="breadcrumbs text-accent my-2 text-sm"
+            role="navigation"
+            aria-label="Breadcrumb"
+        >
             <ul>
                 <li>
                     <Link href="/" className="link-accent">

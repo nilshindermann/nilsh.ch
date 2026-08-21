@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: 'Downloads - Covid Game',
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
     Damit habe ich einen Jurypreis beim Lehrlingswettbewerb Züri-Oberland 2021 gewonnen.`,
 };
 
-export default function CatchMeIfYouCanDownloadsPage(): ReactElement {
+export default function CovidGameDownloadsPage(): ReactElement {
     return (
         <>
             <h2>Downloads</h2>
