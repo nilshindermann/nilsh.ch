@@ -1,5 +1,6 @@
 import React from 'react';
 import GameTabs from '@/components/game-tabs';
+import Image from 'next/image';
 
 const gameName = 'Catch Me If You Can';
 
@@ -23,6 +24,12 @@ export default function CatchMeIfYouCanPageLayout({
                 },
             ]}
         >
+            <Image
+                src="/assets/games/catch_me_if_you_can_banner.webp"
+                alt="Catch Me If You Can"
+                width={1600}
+                height={300}
+            />
             {children}
         </GameTabs>
     );

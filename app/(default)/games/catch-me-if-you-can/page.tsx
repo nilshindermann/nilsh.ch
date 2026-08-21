@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 
 const gallery = [
     {
-        href: '/assets/games/catch_me_if_you_can_0.webp',
+        href: '/assets/games/catch_me_if_you_can_slide0.webp',
         alt: 'Catch Me If You Can: Start Screen',
     },
     {
-        href: '/assets/games/catch_me_if_you_can_1.webp',
+        href: '/assets/games/catch_me_if_you_can_slide1.webp',
         alt: 'Catch Me If You Can: Ingame Screen',
     },
     {
-        href: '/assets/games/catch_me_if_you_can_2.webp',
+        href: '/assets/games/catch_me_if_you_can_slide2.webp',
         alt: 'Catch Me If You Can: Gameover Screen',
     },
 ];
