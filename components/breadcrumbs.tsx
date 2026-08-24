@@ -36,7 +36,7 @@ export default function Breadcrumbs(): React.ReactNode {
         >
             <ul>
                 <li>
-                    <Link href="/" className="link-accent">
+                    <Link href="/" className="link-accent" aria-label="Home">
                         <HomeIcon />
                     </Link>
                 </li>

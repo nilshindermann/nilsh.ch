@@ -17,7 +17,7 @@ export default function GameCarousel({
         <div className="carousel w-full">
             {slides.map((slide, index) => (
                 <div
-                    key={index}
+                    key={slide.href}
                     id={`slide${index}`}
                     className="carousel-item relative w-full"
                 >
@@ -32,12 +32,14 @@ export default function GameCarousel({
                         <a
                             href={`#slide${index === 0 ? slides.length - 1 : index - 1}`}
                             className="btn btn-circle"
+                            aria-label="Vorheriges Bild"
                         >
                             ❮
                         </a>
                         <a
                             href={`#slide${index === slides.length - 1 ? 0 : index + 1}`}
                             className="btn btn-circle"
+                            aria-label="Nächstes Bild"
                         >
                             ❯
                         </a>

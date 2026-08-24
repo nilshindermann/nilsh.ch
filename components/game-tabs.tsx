@@ -23,18 +23,17 @@ export default function GameTabs({
     return (
         <>
             <h1>{title}</h1>
-            <div role="tablist" className="tabs tabs-box justify-center">
+            <nav className="tabs tabs-box justify-center">
                 {tabs.map(({ href, label }) => (
                     <Link
                         key={href}
-                        role="tab"
                         className={`tab ${pathname === href ? 'tab-active' : ''}`}
                         href={href}
                     >
                         {label}
                     </Link>
                 ))}
-            </div>
+            </nav>
             <div className="mt-5">{children}</div>
         </>
     );
