@@ -4,7 +4,7 @@ import Link from '@/components/link';
 import { Project, projects } from '@/data/projects';
 
 export const metadata: Metadata = {
-    title: 'Projekte - Nils Hindermann',
+    title: 'Projekte',
     description:
         'Eine Liste von einigen Projekten, die ich aktuell oder in der Vergangenheit umgesetzt habe.',
 };

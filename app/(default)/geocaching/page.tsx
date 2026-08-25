@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 import Link from '@/components/link';
 
 export const metadata: Metadata = {
-    title: 'Geocaching - Nils Hindermann',
+    title: 'Geocaching',
     description:
         'Geocaching ist eines meiner Hobbys. Seit 2018 habe ich einen eigenen Account und habe über 7000 Funde.',
 };

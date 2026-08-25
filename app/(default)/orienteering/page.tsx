@@ -4,7 +4,7 @@ import { ReactElement } from 'react';
 import Link from '@/components/link';
 
 export const metadata: Metadata = {
-    title: 'OL - Nils Hindermann',
+    title: 'OL',
     description:
         'Orientierungslauf (OL) ist eines meiner Hobbys seit 2012 und ich bin in der OLG Stäfa tätig.',
 };

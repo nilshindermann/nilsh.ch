@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
 
 export const metadata: Metadata = {
-    title: 'Kontakt - Nils Hindermann',
+    title: 'Kontakt',
     description:
         'Kontaktiere Nils Hindermann, indem du ihm eine E-Mail schreibst. Er ist ausserdem auf Social Media Plattformen wie Instagram und LinkedIn erreichbar.',
 };

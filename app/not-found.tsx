@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import Link from '@/components/link';
 
 export const metadata: Metadata = {
-    title: '404 - Nils Hindermann',
+    title: '404',
     description: 'The requested page could not be found.',
 };
 

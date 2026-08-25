@@ -29,7 +29,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${event.name} - Countdown - Nils Hindermann`,
+        title: `${event.name} - Countdown`,
         description: `${event.name}. Der Countdown läuft.`,
     };
 }

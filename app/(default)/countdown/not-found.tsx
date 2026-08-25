@@ -5,7 +5,7 @@ import React, { ReactElement } from 'react';
 import { events } from './events';
 
 export const metadata: Metadata = {
-    title: '404 - Nils Hindermann',
+    title: '404',
     description: 'Das gewünschte Ereignis konnte nicht gefunden werden.',
 };
 
