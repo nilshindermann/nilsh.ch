@@ -3,3 +3,6 @@ allowBuilds:
     sharp: true
     unrs-resolver: true
     workerd: true
+
+overrides:
+    "glob@^10.3": "^10.5"
