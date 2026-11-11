@@ -32,15 +32,15 @@ The style is applied via prettier & ESLint
 
 ### Deployment
 
-- Deployed to **Cloudflare** via **OpenNext** (`@opennextjs/cloudflare`) and **Wrangler**.
-- Config: `open-next.config.ts`, `wrangler.toml`.
-- Scripts: `cf-build`, `cf-preview`, `cf-deploy`, `cf-deploy-preview`, `cf-typegen`.
+- Deployed to **Cloudflare Workers** via **vinext** (Vite-based Next.js runtime, `vinext` / `@vinext/cloudflare`).
+- Config: `vite.config.ts`, `cloudflare.config.ts`.
+- Scripts: `cf-build`, `cf-preview`, `cf-deploy`, `cf-typegen`.
 
 ## Common Commands
 ```bash
 npm run dev              # Start Next.js dev server
 npm run lint             # ESLint with auto-fix
 npm run prettier-write   # Format all files
-npm run cf-build         # Build for Cloudflare via OpenNext
-npm run cf-deploy        # Deploy to Cloudflare
+npm run cf-build         # Build for Cloudflare via vinext (vite build)
+npm run cf-deploy        # Deploy to Cloudflare Workers
 ```
