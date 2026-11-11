@@ -12,16 +12,17 @@
         "cf-build": "vite build",
         "cf-preview": "pnpm run cf-build && vite preview",
         "cf-deploy": "vinext-cloudflare deploy",
+        "cf-deploy-preview": "vinext-cloudflare previews deploy",
         "cf-typegen": "cf workers types"
     },
     "dependencies": {
-        "@vinext/cloudflare": "^1.3.3",
+        "@vinext/cloudflare": "^1",
         "dayjs": "^1",
         "next": "^16",
         "react": "^19",
         "react-dom": "^19",
-        "react-server-dom-webpack": "^19.3.1",
-        "vinext": "^1.4.4"
+        "react-server-dom-webpack": "^19",
+        "vinext": "^1"
     },
     "devDependencies": {
         "@cloudflare/vite-plugin": "2.0.0-beta.v.13",
@@ -30,8 +31,8 @@
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "@typescript-eslint/parser": "^8",
-        "@vitejs/plugin-react": "^6.3.0",
-        "@vitejs/plugin-rsc": "^0.5.39",
+        "@vitejs/plugin-react": "^6",
+        "@vitejs/plugin-rsc": "^0.5",
         "autoprefixer": "^10",
         "cf": "1.0.0-beta.28",
         "daisyui": "^5",
@@ -48,8 +49,8 @@
         "tailwindcss": "^4",
         "typescript": "^6",
         "typescript-eslint": "^8",
-        "vite": "8.3.0",
-        "vite-css-modules": "^1.16.1"
+        "vite": "^8",
+        "vite-css-modules": "^1"
     },
     "importSort": {
         ".js, .jsx, .ts, .tsx": {

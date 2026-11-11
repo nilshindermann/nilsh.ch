@@ -34,7 +34,7 @@ The style is applied via prettier & ESLint
 
 - Deployed to **Cloudflare Workers** via **vinext** (Vite-based Next.js runtime, `vinext` / `@vinext/cloudflare`).
 - Config: `vite.config.ts`, `cloudflare.config.ts`.
-- Scripts: `cf-build`, `cf-preview`, `cf-deploy`, `cf-typegen`.
+- Scripts: `cf-build`, `cf-preview`, `cf-deploy`, `cf-deploy-preview`, `cf-typegen`.
 
 ## Common Commands
 ```bash
