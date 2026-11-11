@@ -5,4 +5,4 @@ allowBuilds:
     workerd: true
 
 overrides:
-    "glob@^10.3": "^10.5"
+    "fflate@^0.7": "^0.7.5"
